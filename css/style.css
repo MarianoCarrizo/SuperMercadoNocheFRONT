@@ -1,1 +1,250 @@
-# Empty CSS file for your own CSS
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@Import 'bootstrap.css'
+:root{
+    --red:rgba(153, 10, 10, 0.904);
+    --white:rgb(241, 238, 238);
+    --black:rgb(10, 10, 10);
+    --border:.1rem solid rgba(0, 0, 0, 0.1);
+    --border-hover:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+    
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition:all .2s linear;
+    transition:width none;
+}
+
+
+.button-search {
+    background-color: #025fb1; 
+    border: none;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    padding: 8px 10px;
+    border-radius: 10px;
+    block-size: auto;
+    width: 80px;
+    text-decoration: none;
+  }
+  .dropdown-item:hover{
+    background-color: #025aa5;
+  }
+
+
+  .bttn {
+    background-color: #0275d8; 
+    color: rgb(240, 240, 240);
+    padding: 15px 32px;
+    width: 250px;
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    border-radius: 12px;
+    block-size: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-decoration: none;
+  }
+  .bttnCarrito {
+    background-color: #0275d8; 
+    color: rgb(240, 240, 240);
+    padding: 8px 22px;
+    display: inline;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-decoration: none;
+  }
+
+
+  .bttnstatic {
+    background-color: #0275d8; 
+    color: rgb(240, 240, 240);
+    padding: 15px 32px;
+    width: 1855px;
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    margin: 0 auto;
+    block-size: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-decoration: none;
+  }
+  
+  .directionFooter {
+    background-color: #0275d8; 
+    color: rgb(240, 240, 240);
+    padding: 15px 32px;
+    width: 1855px;
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    margin: 0 auto;
+    block-size: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-decoration: none;
+  }
+  .directionDescription {
+    background-color: #025fb1; 
+    color: rgb(240, 240, 240);
+    padding: 15px 32px;
+    width: 1855px;
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    margin: 0 auto;
+    block-size: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-decoration: none;
+  }
+  .btt
+  .bttn:hover {
+    background-color: #027ae2; 
+    color: white;
+  }
+
+  .button-search:hover {
+    background-color: #027ae2; 
+    color: white;
+  }
+  .card-body {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .text-right {
+    text-align: center;
+    block-size: auto;
+    font-size: 1.5rem;
+  }
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(255, 246, 246);
+}
+
+.navbar-nav > li > .dropdown-menu { background-color: #0275d8; }
+
+.navbar-nav > li > .dropdown-menu a{ color: #efeff0;  }
+
+.navbar-nav > li > .dropdown-menu > .active>a{
+    background-color: #0275d8;
+}
+
+
+.navbar-nav > .active > a { 
+    background-color: rgb(248, 248, 248) ; 
+}
+
+.navbar-light .navbar-brand {
+    color: rgb(255, 255, 255);
+}
+.login-form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:rgba(0, 0, 0, 0.89);
+    position:fixed;
+    top:0; right:-105%;
+    z-index: 10000;
+    height:100%;
+    width:100%;
+}
+
+.login-form-container.active{
+    right:0;
+}
+
+.login-form-container form{
+    background:rgb(0, 0, 0);
+    color:var(--white);
+    border:var(--border);
+    width:40rem;
+    padding:2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    margin:2rem;
+}
+
+.login-form-container form h3{
+    font-size: 2.5rem;
+    
+    text-transform: uppercase;
+    
+    color:var(--white);
+    text-align: center;
+}
+
+.login-form-container form span{
+    display: block;
+    font-size: 1.5rem;
+    
+    padding-top: 1rem;
+}
+
+.login-form-container form .box{
+    width: 100%;
+    margin:.7rem 0;
+    background:rgba(255, 255, 255, 0.89);
+    font-size: 1.6rem;
+    border:var(--border);
+    border-radius: .5rem;
+    padding:1rem 1.2rem;
+    color:var(--black);
+    text-transform: none;
+}
+
+.login-form-container form .checkbox{
+    display:flex;
+    align-items: center;
+    gap:.5rem;
+    padding:1rem 0;
+}
+
+.login-form-container form .checkbox label{
+    font-size: 1.5rem;
+    color:var(--white);
+    cursor: pointer;
+}
+
+.login-form-container form .btn{
+    text-align: center;
+    width:100%;
+    margin:1.5rem 0;
+}
+
+.login-form-container form p{
+    padding-top: .8rem;
+    color:var(--light-color);
+    font-size: 1.5rem;
+}
+
+.login-form-container form p a{
+    color:var(--red);
+    text-decoration: underline;
+}
+
+.login-form-container #close-login-btn{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    top:1.5rem; right:2.5rem;
+    font-size: 5rem;
+    color:rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+
