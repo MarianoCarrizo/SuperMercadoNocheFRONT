@@ -1,4 +1,9 @@
 const urlImg1 = "https://localhost:7175/api/productos/1"
+const urlImg2 = "https://localhost:7175/api/productos/2"
+const urlImg3 = "https://localhost:7175/api/productos/3"
+const urlImg4 = "https://localhost:7175/api/productos/4"
+const urlImg5 = "https://localhost:7175/api/productos/5"
+const urlImg6 = "https://localhost:7175/api/productos/6"
 const  products = "https://localhost:7175/api/productos"
 
 fetch(urlImg1)
@@ -6,19 +11,97 @@ fetch(urlImg1)
 .then(data=>{
     console.log(data)
     
-    const img1=document.getElementById('img1');
-    const nombre1=document.getElementById('nombre1');
-    const marca1=document.getElementById('marca1');
-    const precio1=document.getElementById('precio1');
+    const img=document.getElementById('img1');
+    const nombre=document.getElementById('nombre1');
+    const marca=document.getElementById('marca1');
+    const precio=document.getElementById('precio1');
 
-    img1.src=data.image;
-    nombre1.textContent  = data.nombre;
-    marca1.innerText = data.marca;
-    precio1.innerText ='$'+data.precio;
+    img.src=data.image;
+    nombre.textContent  = data.nombre +" "+data.marca
+    precio.innerText ='$'+data.precio;
  
 
 });
+fetch(urlImg2)
+.then(rest=>rest.json())
+.then(data=>{
+    console.log(data)
+    
+    const img=document.getElementById('img2');
+    const nombre=document.getElementById('nombre2');
+    const marca=document.getElementById('marca2');
+    const precio=document.getElementById('precio2');
 
+    img.src=data.image;
+    nombre.textContent  = data.nombre +" "+data.marca
+    precio.innerText ='$'+data.precio;
+ 
+
+});
+fetch(urlImg3)
+.then(rest=>rest.json())
+.then(data=>{
+    console.log(data)
+    
+    const img=document.getElementById('img3');
+    const nombre=document.getElementById('nombre3');
+    const marca=document.getElementById('marca3');
+    const precio=document.getElementById('precio3');
+
+    img.src=data.image;
+    nombre.textContent  = data.nombre +" "+data.marca
+    precio.innerText ='$'+data.precio;
+ 
+
+});
+fetch(urlImg4)
+.then(rest=>rest.json())
+.then(data=>{
+    console.log(data)
+    
+    const img=document.getElementById('img4');
+    const nombre=document.getElementById('nombre4');
+    const marca=document.getElementById('marca4');
+    const precio=document.getElementById('precio4');
+
+    img.src=data.image;
+    nombre.textContent  = data.nombre +" "+data.marca
+    precio.innerText ='$'+data.precio;
+ 
+
+});
+fetch(urlImg5)
+.then(rest=>rest.json())
+.then(data=>{
+    console.log(data)
+    
+    const img=document.getElementById('img5');
+    const nombre=document.getElementById('nombre5');
+    const marca=document.getElementById('marca5');
+    const precio=document.getElementById('precio5');
+
+    img.src=data.image;
+    nombre.textContent  = data.nombre +" "+data.marca
+    precio.innerText ='$'+data.precio;
+ 
+
+});
+fetch(urlImg6)
+.then(rest=>rest.json())
+.then(data=>{
+    console.log(data)
+    
+    const img=document.getElementById('img6');
+    const nombre=document.getElementById('nombre6');
+    const marca=document.getElementById('marca6');
+    const precio=document.getElementById('precio6');
+
+    img.src=data.image;
+    nombre.textContent  = data.nombre +" "+data.marca
+    precio.innerText ='$'+data.precio;
+ 
+
+});
 
 function getOrdenes(){
 
