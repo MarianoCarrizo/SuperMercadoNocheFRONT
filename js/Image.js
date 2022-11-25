@@ -13,7 +13,6 @@ fetch(urlImg1)
     
     const img=document.getElementById('img1');
     const nombre=document.getElementById('nombre1');
-    const marca=document.getElementById('marca1');
     const precio=document.getElementById('precio1');
 
     img.src=data.image;
@@ -29,7 +28,6 @@ fetch(urlImg2)
     
     const img=document.getElementById('img2');
     const nombre=document.getElementById('nombre2');
-    const marca=document.getElementById('marca2');
     const precio=document.getElementById('precio2');
 
     img.src=data.image;
@@ -45,7 +43,6 @@ fetch(urlImg3)
     
     const img=document.getElementById('img3');
     const nombre=document.getElementById('nombre3');
-    const marca=document.getElementById('marca3');
     const precio=document.getElementById('precio3');
 
     img.src=data.image;
@@ -61,7 +58,6 @@ fetch(urlImg4)
     
     const img=document.getElementById('img4');
     const nombre=document.getElementById('nombre4');
-    const marca=document.getElementById('marca4');
     const precio=document.getElementById('precio4');
 
     img.src=data.image;
@@ -77,7 +73,6 @@ fetch(urlImg5)
     
     const img=document.getElementById('img5');
     const nombre=document.getElementById('nombre5');
-    const marca=document.getElementById('marca5');
     const precio=document.getElementById('precio5');
 
     img.src=data.image;
@@ -93,7 +88,6 @@ fetch(urlImg6)
     
     const img=document.getElementById('img6');
     const nombre=document.getElementById('nombre6');
-    const marca=document.getElementById('marca6');
     const precio=document.getElementById('precio6');
 
     img.src=data.image;
