@@ -1,9 +1,9 @@
 const urlProductos = "https://localhost:7175/api/productos/";
 const urlCarritos = "https://localhost:7175/api/carrito/";
-const urlOrdenes = "'https://localhost:7175/api/Orden";
+const urlOrdenes = "https://localhost:7175/api/Orden";
 
-export const getOrdenes = (from, to, callback) => {
-    fetch(`${urlOrdenes}+${from}+${to}`,{
+export const getOrdenes = (from,to, callback) => {
+    fetch(`${urlOrdenes}?from=${from}&to=${to}`,{
         method : 'GET'
     })
     .then((httpResponse)=>{
