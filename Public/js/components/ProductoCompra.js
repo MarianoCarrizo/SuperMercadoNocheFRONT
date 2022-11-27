@@ -1,4 +1,4 @@
-export const Producto = (nombre,precio, image,marca,productoId) => `
+export const Producto = (nombre,marca, precio, image) => `
 <div class="col-md-4 mt-2">
     <div class="card">
         <div class="card-body">
@@ -13,9 +13,6 @@ export const Producto = (nombre,precio, image,marca,productoId) => `
 				</h6>
 			</div>
 			<h3 id="precio1" class="mb-0 font-weight-semibold">$${precio}</h3>
-			<form>
-			<a href="../view/AgregarProductoSingular.html?productoId=${productoId}"<button Class="bttn">Comprar</button></a>
-			</form>
 		</div>
 	</div>
 </div>
