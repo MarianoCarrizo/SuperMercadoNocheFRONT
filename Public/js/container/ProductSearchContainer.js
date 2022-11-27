@@ -1,5 +1,5 @@
 import { Producto } from "../components/ProductList.js";
-import { getProductos } from "../services/fetchServices.js";
+import { getProductosName } from "../services/fetchServices.js";
 import { navbar } from "../components/Navbar.js";
 
 const renderProductos = (json) =>{
@@ -12,6 +12,7 @@ const renderProductos = (json) =>{
 
 }
 
-export const ProductosRender = () => {
-    getProductos(renderProductos);
+
+export const ProductosRender = (Busca) => {
+    getProductosName(Busca,  renderProductos );
 }

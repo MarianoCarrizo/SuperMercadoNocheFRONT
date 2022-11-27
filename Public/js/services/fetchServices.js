@@ -1,4 +1,5 @@
 const urlProductos = "https://localhost:7175/api/productos/";
+const urlProductosS = "https://localhost:7175/api/productos";
 const urlCarritos = "https://localhost:7175/api/carrito/";
 const urlOrdenes = "https://localhost:7175/api/Orden";
 
@@ -28,6 +29,20 @@ export const getProductos = (callback) => {
         callback(body)
     })
 }
+export const getProductosName = (name,callback) => {
+    fetch(`${urlProductos}?name=${name}`,{
+        method : 'GET'
+    })
+    .then((httpResponse)=>{
+        if(httpResponse.ok)
+            return httpResponse.json()
+    })
+    .then(body => {
+        console.log(body)
+        callback(body)
+    })
+}
+
 
 
 export const getCarritoById = (carritoId, callback) => {

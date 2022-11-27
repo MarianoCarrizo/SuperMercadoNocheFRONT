@@ -1,6 +1,7 @@
 {
   "name": "tp3-front",
   "version": "1.0.0",
+  "type": "module",
   "description": "Proyecto Software tp3",
   "main": "index.js",
   "scripts": {

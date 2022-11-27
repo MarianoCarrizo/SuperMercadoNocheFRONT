@@ -9,7 +9,7 @@ export const Producto = (nombre,precio, image,marca,productoId) => `
 		<div class="card-body bg-light text-center">
             <div class="mb-2">
 				<h6 class="font-weight-semibold mb-2">
-					<a id ="nombre1" href="#" class="text-default mb-2" data-abc="true">${nombre} ${marca}</a>
+					<a id ="nombre1" href="../view/AgregarProductoSingular.html?productoId=${productoId}" class="text-default mb-2" data-abc="true">${nombre} ${marca}</a>
 				</h6>
 			</div>
 			<h3 id="precio1" class="mb-0 font-weight-semibold">$${precio}</h3>
