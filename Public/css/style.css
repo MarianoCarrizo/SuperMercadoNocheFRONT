@@ -21,7 +21,9 @@
     transition:width none;
 }
 
-
+.submit , .form-control mr-sm-2 {
+  
+}
 .button-search {
     background-color: #025fb1; 
     border: none;

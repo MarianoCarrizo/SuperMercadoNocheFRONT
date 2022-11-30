@@ -2,6 +2,9 @@ import { ProductosRender} from "../container/ProductSearchContainer.js";
 
 
 document.getElementById("boton-busqueda").addEventListener("click", buscarProductos);
+
+
+
 function buscarProductos() {
     
     console.log("Se escucha el evento")

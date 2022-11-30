@@ -1,4 +1,4 @@
-import { Producto } from "../components/producto.js";
+import { Producto } from "../components/ProductList.js";
 import { getProductosName } from "../services/fetchServices.js";
 
 const renderProductos = (json) =>{
