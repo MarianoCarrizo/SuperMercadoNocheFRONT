@@ -33,7 +33,10 @@ export const getProductosName = (name,callback) => {
     fetch(`${urlProductosS}?name=${name}`,{
         method : 'GET'
     })
-    .then((httpResponse)=>{
+    .then((httpResponse)=>{ 
+        if (http.status == 404){
+            return null;
+        }
         if(httpResponse.ok)
             return httpResponse.json()
     })

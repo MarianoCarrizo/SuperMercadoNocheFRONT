@@ -1,4 +1,4 @@
-export const CarritoView = (nombre,precio,image,marca,Cantidad,descripcion) => `
+export const CarritoView = (nombre,precio,image,marca,cantidad,descripcion) => `
 <div class="card rounded-3 mb-4">
           <div class="card-body p-4">
             <div class="row d-flex justify-content-between align-items-center">
@@ -8,12 +8,12 @@ export const CarritoView = (nombre,precio,image,marca,Cantidad,descripcion) => `
                   class="img-fluid rounded-3" alt="Cotton T-shirt">
               </div>
               <div class="col-md-3 col-lg-3 col-xl-3">
-                <p class="lead fw-normal mb-2">${nombre} ${marca}</p>
-                <p>${descripcion}</p>
+                <p class="lead fw-normal mb-2">${descripcion}</p>
+                <p>${marca}</p>
               </div>
               <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
 
-				<div>${Cantidad}</div>
+				<div>cantidad  ${nombre}</div>
               </div>
               <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                 <h5 class="mb-0">$${precio}</h5>
