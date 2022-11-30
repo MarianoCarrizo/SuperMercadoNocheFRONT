@@ -21,9 +21,6 @@
     transition:width none;
 }
 
-.submit , .form-control mr-sm-2 {
-  
-}
 .button-search {
     background-color: #025fb1; 
     border: none;
@@ -252,7 +249,28 @@ img.center {
     color:var(--white);
     cursor: pointer;
 }
+.containr { 
+  height: 200px;
+  position: relative;
+  border: 3px solid green; 
+}
 
+.Cen {
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.ri {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 .login-form-container form .btn{
     text-align: center;
     width:100%;

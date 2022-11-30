@@ -16,5 +16,6 @@ const renderProductos = (json) =>{
 
 export const SingleProductRender = (id) => {
     debugger;
+    const productoId = localStorage.setItem('productoId',id);
     getProductoById(id, renderProductos);
 }

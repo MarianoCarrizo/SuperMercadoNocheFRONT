@@ -1,7 +1,7 @@
 
 
 
-document.getElementById("login-button").addEventListener("click", logearse);
+document.getElementById("boton-log").addEventListener("click", buscarProductos);
 
 
 

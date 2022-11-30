@@ -1,3 +1,5 @@
+
+
 const urlProductos = "https://localhost:7175/api/productos/";
 const urlProductosS = "https://localhost:7175/api/productos";
 const urlCarritos = "https://localhost:7175/api/carrito/";
@@ -23,6 +25,34 @@ export const getProductos = (callback) => {
     .then((httpResponse)=>{
         if(httpResponse.ok)
             return httpResponse.json()
+    })
+    .then(body => {
+        console.log(body)
+        callback(body)
+    })
+}
+export const AddProduct = (cantidad,userId,productoId, callback) => {
+    let jsonBody = {
+        clienteId: userId,
+        productoId: productoId,
+        cantidad:cantidad
+       
+     }
+     let body =JSON.stringify(jsonBody)
+     console.log(body)
+    fetch(`${urlCarritos}`,{
+        method : 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type':'application/json'
+        },
+        body: body
+    })
+    .then((httpResponse)=>{ 
+        if (httpResponse == 404){
+            return null;
+        }
+       
     })
     .then(body => {
         console.log(body)
