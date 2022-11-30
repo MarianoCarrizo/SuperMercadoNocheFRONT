@@ -1,12 +1,11 @@
 import { Producto } from "../components/ProductoCompra.js";
 import { getProductoById } from "../services/fetchServices.js";
-import { navbar } from "../components/Navbar.js";
+
 
 const renderProductos = (json) =>{
     debugger;
     let _root = document.getElementById("producto-index");
-    let navbarRoot = document.getElementById("nav-bar");
-    navbarRoot.innerHTML += navbar;
+
     let nombre = json.nombre;
     let marca = json.marca;
     let precio = json.precio;

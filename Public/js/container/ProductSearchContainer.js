@@ -1,11 +1,11 @@
-import { Producto } from "../components/ProductList.js";
+import { Producto } from "../components/producto.js";
 import { getProductosName } from "../services/fetchServices.js";
-import { navbar } from "../components/Navbar.js";
 
 const renderProductos = (json) =>{
-    let _root = document.getElementById("producto-lista");
-    let navbarRoot = document.getElementById("nav-bar");
-    navbarRoot.innerHTML += navbar;
+    debugger;
+
+    let _root = document.getElementById("productos-index");
+    
     Object.values(json).forEach(producto => {
         _root.innerHTML+=Producto(producto.nombre, producto.precio, producto.image,producto.marca,producto.productoId,producto.descripcion);
     });
@@ -14,5 +14,6 @@ const renderProductos = (json) =>{
 
 
 export const ProductosRender = (Busca) => {
+    debugger;
     getProductosName(Busca,  renderProductos );
 }

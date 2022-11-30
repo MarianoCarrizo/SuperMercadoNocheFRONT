@@ -30,7 +30,7 @@ export const getProductos = (callback) => {
     })
 }
 export const getProductosName = (name,callback) => {
-    fetch(`${urlProductos}?name=${name}`,{
+    fetch(`${urlProductosS}?name=${name}`,{
         method : 'GET'
     })
     .then((httpResponse)=>{
@@ -60,19 +60,6 @@ export const getCarritoById = (carritoId, callback) => {
 }
 export const getProductoById = (productoId, callback) => {
     fetch(`${urlProductos}+${productoId}`, {
-        method: 'GET'
-    })
-    .then((httpResponse)=>{
-        if(httpResponse.ok)
-            return httpResponse.json()
-    })
-    .then(body => {
-        console.log(body);
-        callback(body);
-    })
-}
-export const searchProducts = (name, callback) => {
-    fetch(`${urlProductos}+/${name}`, {
         method: 'GET'
     })
     .then((httpResponse)=>{
