@@ -44,15 +44,20 @@
 					<a class="nav-link" href="../view/VentasDelDiaVista.html">Ventas del día</a>
 			   </li>				
 			   <form class="form-inline">
-			   <input class="form-control mr-sm-2" id="Busca" placeholder="Buscar Producto..." type="text"> 
-			   <a href="../view/Index.html"<button Class="btn button-search my-2 my-sm-0" id="boton-busqueda" type="bttn">Buscar</button></a>
-			
-		   </form>
+				<input class="form-control mr-sm-2" id="Busca" placeholder="Buscar Producto..." type="text"> 
+				<a href="../view/Index.html"<button Class="btn button-search my-2 my-sm-0" id="boton-busqueda" type="bttn">Buscar</button></a>
+			 
+			</form>
 		
 			</div>
+			
+				<input class="form " id="ingresar-id" placeholder="Ingresar ID..." type="number"> 
+				<button Class="btn button-search my-2 my-sm-0" id="boton-log" type="bttn">Ingresar</button>
+			 
+		
 		</nav>
 
-		<div class="carousel slide" id="carousel-997188">
+		<div class="carousel slide " id="carousel-997188">
 			<ol class="carousel-indicators">
 				<li data-slide-to="0" data-target="#carousel-997188">
 				</li>
@@ -61,8 +66,8 @@
 				<li data-slide-to="2" data-target="#carousel-997188" class="active">
 				</li>
 			</ol>
-			<div class="carousel-inner">
-				<div class="carousel-item">
+			<div class="carousel-inner " >
+				<div class="carousel-item ">
 					<img class="d-block w-100" alt="Carousel Bootstrap First" src="../img/header1.jpg">
 					<div class="carousel-caption">
 						<h4>
@@ -100,13 +105,40 @@
 	</div>
 </div>
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-14">
 			<div class="directionFooter">
 				<h1>
 					Carrito 
 				</h1>
 			</div>
-			<div class="row" id="productos-carrito">
+			<div  id="productos-carrito">
+				
+	
+				<section class="h-50 " style="background-color: #eee;">
+					
+  <div class="container h-200 py-5 ">
+	
+    <div class="row d-flex justify-content-center align-items-center h-100">
+
+        <div id="carrito-card">
+        
+        </div>
+
+    
+
+        
+
+        <div class="card">
+          <div class="card-body">
+			<button formaction="EliminarProducto.html"Class="bttnCarrito">Confirmar Compra </button>
+			<button formaction="ConfirmacionCompra.html"Class="bttnCarrito">Eliminar Productos </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 				
 			</div>
 			<h3 class="text-center bttnstatic ">
@@ -161,7 +193,7 @@
 	</div>
 
 	<div class="row">
-		<div class="col-md-12" >
+		<div class="col-md-13" >
 			<h3 class="directionFooter">
 				Dirección
 			</h3> 
@@ -172,7 +204,8 @@
 	</div>
 </div>
 <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-<script type="module" src="../js/init.js"></script>
+<script type="module" src="../js/CarritoInit.js"></script>
+<script type="module" src="../js//eventos/CarritoButton.js"></script>
 
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>

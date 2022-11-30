@@ -46,7 +46,7 @@ export const getProductosName = (name,callback) => {
 
 
 export const getCarritoById = (carritoId, callback) => {
-    fetch(`${urlCarritos}+${carritoId}`, {
+    fetch(`${urlCarritos}?id=${carritoId}`, {
         method: 'GET'
     })
     .then((httpResponse)=>{

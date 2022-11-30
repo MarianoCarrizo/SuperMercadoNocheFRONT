@@ -1,17 +1,7 @@
-import { SingleProductRender } from "./container/productSingleContainer.js";
+import { CarritoRender } from "./container/CarritoContainer.js";
 
-debugger;
-const valores = window.location.search;
-const urlParams = new URLSearchParams(valores);
-var productoId = urlParams.get('productoId');
 
+const userId = localStorage.getItem("UserId");
 window.onload = () =>{
-    if (urlParams.has('productoId')){
-        console.log(productoId)
-        SingleProductRender(productoId);
-    }
-    else{
-        alert('Producto ID no encontrado');
-        window.location.href = "../";
-    }
+    CarritoRender(userId);
 }
