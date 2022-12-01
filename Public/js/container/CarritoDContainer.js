@@ -4,9 +4,9 @@ import {CarritoVacio} from "../components/CarritoVacio.js"
 
 
 const renderCarrito = (json) =>{
-    if(json ==="NotFound"){
+    if(json != undefined){
     let carritoProductos = json.carritoProductos;
-    if(carritoProductos.length  > 0){
+    
     let _root = document.getElementById("carrito-card");
    
     Object.values(carritoProductos).forEach(carritoProducto => {
@@ -16,9 +16,7 @@ const renderCarrito = (json) =>{
 }else{
 let _root = document.getElementById("carrito-card");
 _root.innerHTML+=CarritoVacio("");
-     }
-}let _root = document.getElementById("carrito-card");
-_root.innerHTML+=CarritoVacio("");
+}
 }
 
 

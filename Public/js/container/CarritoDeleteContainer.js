@@ -6,7 +6,7 @@ const renderDelete = (json) =>{
     
 let _root = document.getElementById("producto-index");
 _root.innerHTML=productoAgregado("")
-if(json != null){
+if(json != undefined){
     let _root = document.getElementById("carrito-card");
     let carritoProductos = json.carritoProductos;
     Object.values(carritoProductos).forEach(carritoProducto => {
