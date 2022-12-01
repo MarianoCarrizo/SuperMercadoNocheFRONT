@@ -75,6 +75,26 @@ export const getProductosName = (name,callback) => {
         callback(body)
     })
 }
+export const CompraDone = (UserId,callback) => {
+    fetch(`${urlOrdenes}/${UserId}`,{
+        method : 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type':'application/json'
+        }
+    })
+    .then((httpResponse)=>{ 
+        if (httpResponse == 404){
+            return null;
+        }
+        if(httpResponse.ok)
+            return httpResponse.json()
+    })
+    .then(body => {
+        console.log(body)
+        callback(body)
+    })
+}
 
 
 
@@ -89,6 +109,9 @@ export const getCarritoById = (carritoId, callback) => {
         method: 'GET'
     })
     .then((httpResponse)=>{
+        if(httpResponse == 404){
+            return "NotFound";
+        }
         if(httpResponse.ok)
             return httpResponse.json()
     })

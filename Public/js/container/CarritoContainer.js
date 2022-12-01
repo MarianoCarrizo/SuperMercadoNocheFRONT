@@ -3,8 +3,10 @@ import { getCarritoById } from "../services/fetchServices.js";
 import {CarritoVacio} from "../components/CarritoVacio.js"
 
 const renderCarrito = (json) =>{
+    if(json === "NotFound"){
     let carritoProductos = json.carritoProductos;
     carritoProductos.length  > 0
+    
     if(carritoProductos.length  > 0){
     let _root = document.getElementById("carrito-card");
     let carritoProductos = json.carritoProductos;
@@ -16,6 +18,9 @@ const renderCarrito = (json) =>{
 let _root = document.getElementById("carrito-card");
 _root.innerHTML+=CarritoVacio("");
 }
+}
+let _root = document.getElementById("carrito-card");
+_root.innerHTML+=CarritoVacio("");
 }
 
 
