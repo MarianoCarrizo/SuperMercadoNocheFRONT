@@ -64,7 +64,7 @@ export const getProductosName = (name,callback) => {
         method : 'GET'
     })
     .then((httpResponse)=>{ 
-        if (http.status == 404){
+        if (httpResponse == 404){
             return null;
         }
         if(httpResponse.ok)
@@ -78,6 +78,12 @@ export const getProductosName = (name,callback) => {
 
 
 
+export const DeleteProduct = (userId,productoId) => {
+    fetch(`${urlCarritos}${userId}/${productoId}`, {
+        method: 'DELETE'
+    })
+   
+}
 export const getCarritoById = (carritoId, callback) => {
     fetch(`${urlCarritos}?id=${carritoId}`, {
         method: 'GET'
