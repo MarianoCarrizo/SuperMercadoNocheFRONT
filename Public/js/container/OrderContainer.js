@@ -4,9 +4,11 @@ import { getOrdenes } from "../services/fetchServices.js";
 const renderOrdenes = (json) =>{
     
     let _root = document.getElementById("ordenes-content");
-    _root.innerHTML=("")
+    _root.innerHTML=("");
+    var contador = 1;
     Object.values(json).forEach(orden => {
-        _root.innerHTML+=Order(orden.numero=+1,orden.fecha,orden.total);
+        let contado= contador+1;
+        _root.innerHTML+=Order(orden.fecha,orden.total);
     });
 }
 

@@ -1,9 +1,6 @@
-export const Order = (numero,fecha,total) => `
+export const Order = (fecha,total) => `
 <tbody>
 									<tr>
-										<td>
-											${numero}
-										</td>
 										<td>
 											${fecha}
 										</td>
