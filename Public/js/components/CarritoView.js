@@ -1,3 +1,4 @@
+
 export const CarritoView = (nombre,precio,image,marca,cantidad,descripcion) => `
 <div class="card rounded-3 mb-4">
           <div class="card-body p-4">
@@ -24,5 +25,6 @@ export const CarritoView = (nombre,precio,image,marca,cantidad,descripcion) => `
             </div>
           </div>
         </div>
+        
 
 `

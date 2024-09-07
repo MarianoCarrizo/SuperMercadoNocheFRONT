@@ -1,9 +1,9 @@
 export const Producto = (nombre,precio,image,marca,productoId,descripcion) => `
 <div class="col-md-12">
             
-<div class="card card-body">
-            <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
-                <div class="mr-2 mb-3 mb-lg-0">
+<div class="container card card-body">
+            <div class="media text-lg-left  flex-lg-row">
+                <div class="">
                     
                         <img src="${image}" width="150" height="150" alt="">
                    

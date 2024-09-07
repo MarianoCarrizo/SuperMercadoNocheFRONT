@@ -5,8 +5,7 @@ import {CarritoVacio} from "../components/CarritoVacio.js"
 const renderCarrito = (json) =>{
     let _root = document.getElementById("carrito-card");
     _root.innerHTML=("");
-    let a = document.getElementById("borrar");
-    a.innerHTML=("");
+ 
     if(json != undefined){
     let carritoProductos = json.carritoProductos;
     let _root = document.getElementById("carrito-card");

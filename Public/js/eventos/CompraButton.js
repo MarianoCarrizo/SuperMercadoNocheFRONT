@@ -8,7 +8,7 @@ document.getElementById("confirmar-compra").addEventListener("click", buscarProd
 function buscarProductos() {
     
     console.log("Se escucha el evento")
-    let e = document.getElementById("carrito-card");borrar
+    let e = document.getElementById("carrito-card");
     let a = document.getElementById("borrar");
     e.innerHTML=("");
     a.innerHTML=("");

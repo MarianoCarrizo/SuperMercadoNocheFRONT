@@ -1,3 +1,4 @@
+
 export const Producto = (nombre,precio, image,marca,productoId) => `
 <div class="col-md-4 mt-2">
     <div class="card">

@@ -9,6 +9,7 @@
     --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
 }
 
+
 *{
     
     font-family: 'Poppins', sans-serif;
@@ -38,8 +39,43 @@
   .dropdown-item:hover{
     background-color: #025aa5;
   }
+  
+/* Navbar customization */
+.navbar {
+  padding: 0.5rem 1rem;
+}
 
+.navbar-brand img {
+  border-radius: 50%;
+}
 
+/* Carousel customization */
+.carousel-caption {
+ 
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+.carousel-inner{
+  width: 60vw;
+}
+
+/* Product cards */
+.card {
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.25rem;
+}
+
+.card-text {
+  font-size: 1.125rem;
+}
+
+/* Footer customization */
+  
   .bttn {
     background-color: #0275d8; 
     color: rgb(240, 240, 240);
@@ -61,6 +97,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    display: block;
     border-radius: 12px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     text-decoration: none;
@@ -75,7 +112,7 @@
     padding: 15px 32px;
     width: 1855px;
     text-align: center;
-    display: table;
+    display: block;
     margin: 0 auto;
     margin: 0 auto;
     block-size: auto;
@@ -87,26 +124,26 @@
     background-color: #0275d8; 
     color: rgb(240, 240, 240);
     padding: 15px 32px;
-    width: 1855px;
+    width: 50vw;
     text-align: center;
-    display: table;
+    display: block;
     margin: 0 auto;
     margin: 0 auto;
     block-size: auto;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(31, 85, 146, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-decoration: none;
   }
   .directionDescription {
-    background-color: #025fb1; 
-    color: rgb(240, 240, 240);
+    background-color: #046bfcbf; 
+    color: rgb(0, 0, 0);
     padding: 15px 32px;
-    width: 1855px;
+    width: 100vw;
     text-align: center;
-    display: table;
+    display: block;
     margin: 0 auto;
     margin: 0 auto;
     block-size: auto;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 #000000bf, 0 6px 20px 0 rgba(41, 44, 47, 0.76);
     text-decoration: none;
   }
   .btt
