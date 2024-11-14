@@ -22,6 +22,63 @@
     transition:width none;
 }
 
+/* Style for the navigation arrows with light blue background */
+
+.carousel-control-next,
+.carousel-control-prev {
+  top: 50%;            /* Vertically center the arrows */
+  transform: translateY(-60%); /* Adjust for exact vertical centering */
+  z-index: 1;
+  width: 10%;           /* Adjust the width of the arrows */
+}
+
+
+.carousel-control-prev {
+  left: -80px; /* Move left arrow outside */
+}
+
+.carousel-control-next {
+  right: -80px; /* Move right arrow outside */
+}
+
+
+/* Increase the size of the arrows */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  
+  background-color: #0361b4; /* Light blue color for the arrows */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Make the arrows circular */
+  padding: 5%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Black shadow for depth */
+}
+
+/* Change the color of unselected indicators to blue */
+.carousel-indicators li {
+  background-color: #003366; /* Light Blue */  /* Dark Blue */
+}
+
+/* Change the color of the selected indicator to dark blue */
+.carousel-indicators .active {
+  background-color: #0275d8; /* Dark Blue */
+}
+
+
+
+.carousel-item {
+  height: 100%;
+  justify-content: center; /* Horizontally center the card inside the carousel */
+ 
+
+}
+
+.carousel-item .card-container {
+  margin-bottom: 0; /* Remove any margin below each card container */
+}
+
+
 .button-search {
     background-color: #025fb1; 
     border: none;
@@ -48,31 +105,51 @@
 .navbar-brand img {
   border-radius: 50%;
 }
-
+.carousel {
+  position: relative;
+}
 /* Carousel customization */
 .carousel-caption {
  
   background: rgba(0, 0, 0, 0.5);
   padding: 1rem;
 }
-.carousel-inner{
-  width: 60vw;
-}
+
+
 
 /* Product cards */
 .card {
-  border: none;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ 
+  width: 100%; /* Ensure the card takes up 100% of the card container's width */
+ /* Card layout and consistency */
+ 
+
+ height: 200px;
+
+  padding: 5px; /* Add padding inside the card */
+    box-sizing: border-box; /* Prevent padding from affecting the card's width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure card content is spaced nicely */
+    background-color: #f8f8f800; /* Card background */
+    border-radius: 8px; /* Rounded corners for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow for the card */
 }
 
-.card-title {
-  font-size: 1.25rem;
+.card-container {
+  display: inline-block; /* Ensures the card container adjusts based on the card's width */
+  width: 215px;
+  height: 210px;
+  padding: 1px; /* Padding for the card container */
+  box-sizing: border-box; /* Ensure padding doesn't add extra width */
+  background-color: #ffffff; /* Optional: Background for card container */
 }
 
-.card-text {
-  font-size: 1.125rem;
-}
+
+
+
+
+
 
 /* Footer customization */
   
@@ -103,9 +180,7 @@
     text-decoration: none;
   }
 
-.card-text{
-  text-align: center;
-}
+
   .bttnstatic {
     background-color: #0275d8; 
     color: rgb(240, 240, 240);
@@ -124,18 +199,17 @@
     background-color: #0275d8; 
     color: rgb(240, 240, 240);
     padding: 15px 32px;
-    width: 50vw;
+    width: 100%;
     text-align: center;
     display: block;
     margin: 0 auto;
     margin: 0 auto;
-    block-size: auto;
-    box-shadow: 0 8px 16px 0 rgba(31, 85, 146, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 16px 0 rgba(31, 85, 146, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.097);
     text-decoration: none;
   }
   .directionDescription {
     background-color: #046bfcbf; 
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 15px 32px;
     width: 100vw;
     text-align: center;
@@ -143,7 +217,7 @@
     margin: 0 auto;
     margin: 0 auto;
     block-size: auto;
-    box-shadow: 0 8px 16px 0 #000000bf, 0 6px 20px 0 rgba(41, 44, 47, 0.76);
+    box-shadow: 0 8px 16px 0 #00000044, 0 6px 20px 0 rgba(41, 44, 47, 0.196);
     text-decoration: none;
   }
   .btt
@@ -156,10 +230,7 @@
     background-color: #027ae2; 
     color: white;
   }
-  .card-body {
-    text-align: center;
-    font-size: 1.5rem;
-  }
+  
   .text-right {
     text-align: center;
     block-size: auto;
@@ -169,33 +240,16 @@ img.center {
     display: block;
     margin: 0 auto;
 }
-.card {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
-  border-radius: .1875rem;
+/* Make images smaller and consistent */
+.card-img {
+  width: 100%;
+  height: 100%; /* Set a fixed height for images */
+  object-fit: contain; /* Ensure the image doesn't stretch */
 }
 
-.card-img-actions {
-  position: relative;
-}
-.card-body {
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  padding: 1.25rem;
-  text-align: center;
-}
-
-.card-img{
-
-  width: 350px;
+/* Set a fixed min-height for the card body to make the card more uniform */
+.card-body.bg-light {
+  min-height: 180px; /* Set this to control the uniform height of cards */
 }
 
 
@@ -219,119 +273,33 @@ img.center {
 .navbar-light .navbar-brand {
     color: rgb(255, 255, 255);
 }
-.login-form-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:rgba(0, 0, 0, 0.89);
-    position:fixed;
-    top:0; right:-105%;
-    z-index: 10000;
-    height:100%;
-    width:100%;
-}
 
-.login-form-container.active{
-    right:0;
-}
-
-.login-form-container form{
-    background:rgb(0, 0, 0);
-    color:var(--white);
-    border:var(--border);
-    width:40rem;
-    padding:2rem;
-    box-shadow: var(--box-shadow);
-    border-radius: .5rem;
-    margin:2rem;
-}
-
-.login-form-container form h3{
-    font-size: 2.5rem;
-    
-    text-transform: uppercase;
-    
-    color:var(--white);
-    text-align: center;
-}
-
-.login-form-container form span{
-    display: block;
-    font-size: 1.5rem;
-    
-    padding-top: 1rem;
-}
-
-.login-form-container form .box{
-    width: 100%;
-    margin:.7rem 0;
-    background:rgba(255, 255, 255, 0.89);
-    font-size: 1.6rem;
-    border:var(--border);
-    border-radius: .5rem;
-    padding:1rem 1.2rem;
-    color:var(--black);
-    text-transform: none;
-}
-
-.login-form-container form .checkbox{
-    display:flex;
-    align-items: center;
-    gap:.5rem;
-    padding:1rem 0;
-}
-
-.login-form-container form .checkbox label{
-    font-size: 1.5rem;
-    color:var(--white);
-    cursor: pointer;
-}
-.containr { 
-  height: 200px;
-  position: relative;
-  border: 3px solid green; 
-}
-
-.Cen {
-  margin: 0;
-  position: absolute;
-  top: 60%;
-  left: 60%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.ri {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.login-form-container form .btn{
-    text-align: center;
-    width:100%;
-    margin:1.5rem 0;
-}
-
-.login-form-container form p{
-    padding-top: .8rem;
-    color:var(--light-color);
-    font-size: 1.5rem;
-}
-
-.login-form-container form p a{
-    color:var(--red);
-    text-decoration: underline;
-}
-
-.login-form-container #close-login-btn{
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0);
-    top:1.5rem; right:2.5rem;
-    font-size: 5rem;
-    color:rgb(255, 0, 0);
-    cursor: pointer;
+/* Contenedor de las imágenes */
+.image-container {
+  display: flex;
+  margin:15px;
+  justify-content: center;  /* Centra las imágenes horizontalmente dentro del contenedor */
+  align-items: center;      /* Alinea las imágenes verticalmente */
+  gap: 10px; /* Espacio entre las imágenes */
 }
 
 
+.image-oferta {
+  justify-content: center;
+  margin:25px;
+  width: 1080px;  /* Ancho fijo para las imágenes */
+  height: auto;   /* Mantiene la proporción de las imágenes */
+  border-radius: 3px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+  transition: transform 0.3s ease-in-out; /* Efecto suave al hacer hover */
+}
+
+/* Estilo para las imágenes */
+.image {
+  
+  width: 530px;   /* Ancho fijo para las imágenes */
+  height: auto;   /* Mantiene la proporción de las imágenes */
+  border-radius: 3px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+  transition: transform 0.3s ease-in-out; /* Efecto suave al hacer hover */
+}
