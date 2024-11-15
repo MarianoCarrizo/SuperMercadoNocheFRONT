@@ -303,3 +303,30 @@ img.center {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
   transition: transform 0.3s ease-in-out; /* Efecto suave al hacer hover */
 }
+.product-list {
+  display: grid; /* Use CSS Grid */
+  grid-template-columns: repeat(4, 215px); /* 4 columns with fixed width */
+  gap: 2px; /* Space between cards */
+  justify-content: flex-end; /* Align content to the right */
+  align-items: center; /* Vertically center the grid */
+  padding: 20px; /* Optional: Add padding around the container */
+  width: 100%; /* Make sure the container takes full width */
+}
+/* Responsive design: Adjust grid columns on smaller screens */
+@media (max-width: 1200px) {
+  .product-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .product-list {
+    grid-template-columns: 1fr; /* 1 column on very small screens */
+  }
+}
