@@ -45,7 +45,7 @@
 			   </li>				
 			   <form class="form-inline">
 			   <input class="form-control mr-sm-2" id="Busca" placeholder="Buscar Producto..." type="text"> 
-			   <a href="../view/Index.html"<button Class="btn button-search my-2 my-sm-0" id="boton-busqueda" type="bttn">Buscar</button></a>
+			   <button Class="btn button-search my-2 my-sm-0" id="boton-busqueda" type="bttn">Buscar</button>
 			
 		   </form>
 		
@@ -61,14 +61,47 @@
 	</div>
 </div>
 <div class="image-container">
-    <a href="https://example.com/jabonOferta" target="_blank">
         <img src="../img/productListBanner.jpg" alt="Jabon Oferta" class="image-oferta">
-    </a>
+    
 </div>
-<div class = "container">
-	<div id="producto-lista" class="product-list"></div>
 
+<div class="container-box">
+    <!-- Search and Filter Box -->
+    <div class="container-search">
+        <input type="text" id="busca-box" class="search-box" placeholder="Buscar...">
+        
+        <!-- Category Filter Section -->
+        <div class="category-container">
+            <div class="category-label">Categorías</div>
+            <div class="category-item">
+                <input type="checkbox" id="cat1" class="category-checkbox" data-category="Almacen">
+                <label for="cat1">Almacen</label>
+            </div>
+            <div class="category-item">
+                <input type="checkbox" id="cat2" class="category-checkbox" data-category="Limpieza">
+                <label for="cat2">Limpieza</label>
+            </div>
+            <div class="category-item">
+                <input type="checkbox" id="cat3" class="category-checkbox" data-category="Perfumeria">
+                <label for="cat3">Perfumeria</label>
+            </div>
+            <div class="category-item">
+                <input type="checkbox" id="cat4" class="category-checkbox" data-category="Cuidado de ropa">
+                <label for="cat4">Cuidado de la ropa</label>
+            </div>
+        </div> 
+    </div>
+	<div id="producto-lista" class="product-list">
+        <!-- Product items will be injected here by JavaScript -->
+    </div>
+    <!-- Product Grid -->
+    
 </div>
+
+
+
+
+
 
 	<div class="footer-section" style="width: 100%; padding: 20px 0; background-color: transparent; border-top: 0.5px solid rgba(0, 0, 0, 0.1); border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);">
 
@@ -135,6 +168,7 @@
 <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
 <script type="module" src="../js/initList.js"></script>
 <script type="module" src="../js/eventos/LoginButton.js"></script>
+<script type="module" src="../js/eventos/SearchButton.js"></script>
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
   </body>

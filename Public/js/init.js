@@ -1,4 +1,4 @@
-import { ProductosRender } from "./container/productContainer.js";
+import { ProductosRender } from "./container/productCategoryContainer.js";
 
 
 

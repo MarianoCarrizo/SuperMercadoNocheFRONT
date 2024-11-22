@@ -74,8 +74,49 @@
 
 }
 
+.card-title {
+  font-size: 16px;
+  overflow: hidden; /* Hides any text that exceeds the width */
+  display: block; /* Forces it to behave as a block */
+  max-width: 10%; /* Ensures text stays within bounds */
+}
+
+
+
+
+/* Remove default link styles */
+.product-link {
+  color: inherit; /* Inherit color from parent (black or any text color) */
+  color: #007bff; /* Slight blue color on hover to indicate it's clickable */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Keep the cursor as a pointer to indicate clickability */
+}
+
+/* Optional: Add a subtle hover effect */
+.product-link:hover {
+  
+  text-decoration: solid; /* Add an underline on hover for interactivity */
+}
+
+.card-compra-singular-img {
+  width: 100%;
+  height: 100%; /* Set a fixed height for images */
+  object-fit: contain; /* Ensure the image doesn't stretch */
+
+}
+.card-img {
+  width: 150px;
+  height: 150px; /* Set a fixed height for images */
+  object-fit: contain; /* Ensure the image doesn't stretch */
+}
+
+/* Set a fixed min-height for the card body to make the card more uniform */
+.card-body.bg-light {
+  min-height: 180px; /* Set this to control the uniform height of cards */
+}
+
 .carousel-item .card-container {
-  margin-bottom: 0; /* Remove any margin below each card container */
+  margin-bottom: 50px; /* Remove any margin below each card container */
 }
 
 
@@ -117,15 +158,14 @@
 
 
 
+.text-success {
+  color: green; /* Change this if you want a different color for the price */
+}
+
 /* Product cards */
 .card {
- 
   width: 100%; /* Ensure the card takes up 100% of the card container's width */
- /* Card layout and consistency */
- 
-
- height: 200px;
-
+ height: 250px;
   padding: 5px; /* Add padding inside the card */
     box-sizing: border-box; /* Prevent padding from affecting the card's width */
     display: flex;
@@ -144,12 +184,6 @@
   box-sizing: border-box; /* Ensure padding doesn't add extra width */
   background-color: #ffffff; /* Optional: Background for card container */
 }
-
-
-
-
-
-
 
 /* Footer customization */
   
@@ -241,16 +275,7 @@ img.center {
     margin: 0 auto;
 }
 /* Make images smaller and consistent */
-.card-img {
-  width: 100%;
-  height: 100%; /* Set a fixed height for images */
-  object-fit: contain; /* Ensure the image doesn't stretch */
-}
 
-/* Set a fixed min-height for the card body to make the card more uniform */
-.card-body.bg-light {
-  min-height: 180px; /* Set this to control the uniform height of cards */
-}
 
 
 .navbar-light .navbar-nav .nav-link {
@@ -286,7 +311,7 @@ img.center {
 
 .image-oferta {
   justify-content: center;
-  margin:25px;
+  
   width: 1080px;  /* Ancho fijo para las imágenes */
   height: auto;   /* Mantiene la proporción de las imágenes */
   border-radius: 3px; /* Esquinas redondeadas */
@@ -297,21 +322,85 @@ img.center {
 /* Estilo para las imágenes */
 .image {
   
-  width: 530px;   /* Ancho fijo para las imágenes */
-  height: auto;   /* Mantiene la proporción de las imágenes */
-  border-radius: 3px; /* Esquinas redondeadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
-  transition: transform 0.3s ease-in-out; /* Efecto suave al hacer hover */
+  width: 530px;   
+  height: auto;  
+  border-radius: 3px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease-in-out; 
 }
+
 .product-list {
-  display: grid; /* Use CSS Grid */
-  grid-template-columns: repeat(4, 215px); /* 4 columns with fixed width */
-  gap: 2px; /* Space between cards */
-  justify-content: flex-end; /* Align content to the right */
-  align-items: center; /* Vertically center the grid */
-  padding: 20px; /* Optional: Add padding around the container */
-  width: 100%; /* Make sure the container takes full width */
+  display: grid; 
+  grid-template-columns: repeat(4, 215px); 
+  gap: 2px; 
+  padding: 20px; 
+  
 }
+
+.container-box{
+  display: flex;          /* Flexbox for layout */
+  justify-content: center;  /* Center horizontally */
+  align-items: flex-start;  /* Align to the start (top) vertically */
+  width: 100%;              /* Adjust width as needed */
+  
+}
+
+/* Search Box Styling */
+.container-search {
+  width: 300px;  
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #000; /* Thin black border */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.category-container {
+  margin-top: 20px;
+}
+
+.category-label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.category-item input {
+  margin-right: 10px;
+}
+
+.results {
+  margin-top: 20px;
+}
+
+.result-item {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  background-color: #f9f9f9;
+}
+
+.no-results {
+  padding: 10px;
+  color: #888;
+  background-color: #fff;
+}
+
+
 /* Responsive design: Adjust grid columns on smaller screens */
 @media (max-width: 1200px) {
   .product-list {
@@ -329,4 +418,257 @@ img.center {
   .product-list {
     grid-template-columns: 1fr; /* 1 column on very small screens */
   }
+}
+
+
+
+
+form.Cen {
+  flex: 1;
+  max-width: 200px; /* Adjust form width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.quantity-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-selector button {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#compra-form {
+  width: 40px;              /* Fixed width for the input */
+  height: 40px;             /* Fixed height to make the input a circle */
+  font-size: 1.5rem;          /* Font size to match the buttons */
+  text-align: right;       /* Center the number inside the input */
+  padding: 0;               /* Remove padding to keep the circle shape */
+  border: 2px solid #ccc;   /* Border for the input */
+  border-radius: 50%;       /* Circle shape for the input */
+  background-color: #f8f9fa; /* Light background for the input */
+}
+/* Optional: Align buttons and input */
+.quantity-selector {
+  display: flex;
+  justify-content: center; /* Center buttons and input */
+  align-items: center;     /* Vertically center buttons and input */
+  gap: 10px;               /* Space between the buttons and the input */
+}
+
+.quantity-selector input {
+  width: 80px;             /* Set a fixed width for the input (adjust as needed) */
+  text-align: center;      /* Center text inside the input */
+  font-size: 1.5rem;       /* Adjust the font size for the input */
+}
+
+
+#producto-index {
+  flex: 1;
+  max-width: 1200px;  /* Adjust the card width */
+  margin-bottom: 20px;
+}
+
+/* Custom adjustments to the product info and button alignment */
+.product-info {
+  padding: 20px;
+  margin-left: 20px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.quantity-selector button {
+  width: 60px;              /* Fixed width for the input */
+  height: 60px;
+  font-size: 2rem;           /* Larger font size to make buttons bigger */
+  padding: 12px 20px;        /* Bigger padding for larger buttons */
+  border: 2px solid #ccc;    /* Border for the button */
+  border-radius: 50%;        /* Make the buttons circular */
+  background-color: #076bd6;    /* White background for the button */
+  cursor: pointer;           /* Pointer cursor on hover */
+  transition: all 0.3s ease;  /* Smooth transition for hover effects */
+  display: flex;              /* Flex for centering the content */
+  justify-content: center;    /* Center content horizontally */
+  align-items: center;        /* Center content vertically */
+}
+
+/* Hover effect for the buttons */
+.quantity-selector button:hover {
+  background-color: #0655aa; /* Light background on hover */
+  transform: scale(1.1);      /* Slightly enlarge on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+/* Add to cart button */
+#compra-button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.2rem;
+}
+
+/* Price styling */
+#precio1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.container-compra {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: space-between;  /* Align items to the top */
+  gap: 20px;                /* Space between the card and the product info */
+  padding: 20px;
+  width: 100%;
+}
+
+
+
+
+/* Card styling */
+.card-singular {
+  max-width: 500px;        /* Set max width for the card */
+  width: 100%;             /* Make it flexible */
+  border: 1px solid black;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+
+
+
+}
+
+/* Image inside the card */
+.card-singular .card-body img {
+ 
+  border-top-left-radius: 8px;  /* Rounded top-left corners */
+  border-top-right-radius: 8px; /* Rounded top-right corners */
+}
+
+/* Product info section */
+.product-info {
+
+  flex-direction: column;  /* Stack items vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center;     /* Center content horizontally */
+}
+
+/* Fancy container with dark lining */
+.cen-container {
+  display: flex;                 /* Use flexbox to center content */
+  justify-content: center;       /* Horizontally center content */
+  align-items: center;           /* Vertically center content */
+  height: 100px;                 /* Full viewport height for vertical centering */
+  padding: 20px;                 /* Padding inside the container */
+  background-color: #f8f9fa;     /* Light background color */
+  border: 1.5px solid #333;        /* Dark border for a stylish lining */
+  border-radius: 12px;           /* Rounded corners for smoothness */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+/* Centered message styling */
+.cen-message {
+  text-align: center;            /* Center the text inside the h1 */
+  font-size: 2rem;               /* Larger font size for emphasis */
+  color: #2c3e50;                /* Dark text color for contrast */
+  font-weight: bold;             /* Make the text bold */
+  line-height: 1.5;              /* Space out the text a bit for readability */
+}
+.category-checkbox {
+  cursor: pointer;
+}
+
+/* product list AND SEARCH---------------------------------------------------------------------*/ 
+
+/* Custom container for each product */
+.product-list-card-container {
+  display: flex;
+  justify-content: center;  /* Center the card container */
+  margin-bottom: 5px; /* Add spacing between cards */
+  background-color: transparent;  /* Make the background fully transparent */
+  border: 0.3px solid #333;        /* Dark border for a stylish lining */
+  border-radius: 8px; /* Rounded corners for the card */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Keep shadow for depth */
+}
+
+/* Product card styling */
+.product-list-card {
+  background-color: transparent;  /* Make the card background fully transparent */
+  border-radius: 8px;
+  overflow: hidden;
+  width: 250px; /* Fixed width for the card */
+  margin: 10px;
+  position: relative; /* Make sure the card has a relative position */
+}
+
+/* Card image section */
+.product-list-card-img-actions {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.product-list-card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  object-fit: cover; /* Ensure image covers the area */
+}
+
+/* Card body */
+.product-list-card-body {
+  padding: 20px;
+  background-color: transparent;  /* Make the card body fully transparent */
+  position: relative;  /* Ensure the price is positioned inside this context */
+}
+
+/* Title and Brand Name */
+.product-list-card-body h6 {
+  font-size: 16px; /* Slightly bigger font size for better readability */
+  color: #333;  /* Dark text for readability */
+  font-weight: 600; /* Semi-bold for emphasis */
+  margin-bottom: 15px; /* Adjusted margin for a tighter look */
+  line-height: 1.4; /* Adding line height to give the text a bit of breathing room */
+  text-align: left; /* Align text to the left for better structure */
+  letter-spacing: 0.5px; /* Slight letter-spacing for better visual appeal */
+  text-transform: capitalize; /* Capitalizing the first letter of each word for a polished look */
+  background-color: transparent; /* Ensure background is transparent */
+}
+
+/* Link styling */
+.product-list-card-body h6 a {
+  text-decoration: none;
+}
+
+.product-list-card-body h6 a:hover {
+  text-decoration: solid; /* Underline on hover */
+}
+
+/* Price styling */
+.product-list-card-price {
+  position: absolute; /* Position the price absolutely */
+  bottom:-6px; /* Position at the bottom of the card */
+  left: 0px;  /* Position at the left of the card */
+  font-size: 20px;
+  font-weight: bold;
+  color: #28a745; /* Green color for the price */
+  background-color: transparent;  /* Transparent background */
 }
