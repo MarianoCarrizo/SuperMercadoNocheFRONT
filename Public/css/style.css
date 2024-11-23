@@ -347,12 +347,16 @@ img.center {
 
 /* Search Box Styling */
 .container-search {
+  position: sticky;  /* Keeps the container in place while scrolling */
+  top: 90px;
+  left: 185px;       /* Distance from the left edge */
   width: 300px;  
   padding: 20px;
   background-color: white;
-  border: 1px solid #000; /* Thin black border */
+  border: 2px solid #ccc;    /* Border for the button */
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;     /* Ensure it stays on top of other content */
 }
 
 .search-box {
@@ -364,6 +368,7 @@ img.center {
 }
 
 .category-container {
+  
   margin-top: 20px;
 }
 
@@ -601,7 +606,7 @@ form.Cen {
   justify-content: center;  /* Center the card container */
   margin-bottom: 5px; /* Add spacing between cards */
   background-color: transparent;  /* Make the background fully transparent */
-  border: 0.3px solid #333;        /* Dark border for a stylish lining */
+  border: 2px solid #ccc;    /* Border for the button */
   border-radius: 8px; /* Rounded corners for the card */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Keep shadow for depth */
 }
@@ -672,3 +677,288 @@ form.Cen {
   color: #28a745; /* Green color for the price */
   background-color: transparent;  /* Transparent background */
 }
+
+/* CARRITO-CARD ---------------------------------------------------------------*/
+
+.carrito-card {
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;    /* Border for the button */
+  border-radius: 8px; /* Rounded corners for the card */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Keep shadow for depth */
+}
+
+.carrito-card-body {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Product Image */
+.carrito-img {
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.carrito-img-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Product Info */
+.carrito-info {
+  flex-grow: 1;
+  margin-right: 15px;
+}
+
+.carrito-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.carrito-description {
+  color: #777;
+  font-size: 12px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.carrito-brand {
+  color: #555;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Quantity Controls */
+.carrito-controls {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.carrito-btn {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-size: 16px;
+  color: #333;
+  border-radius: 5px;
+}
+
+.carrito-quantity {
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Price */
+.carrito-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+  width: 90px;
+}
+
+/* Remove Button */
+.carrito-remove {
+  text-align: center;
+  cursor: pointer;
+}
+
+.carrito-remove-btn {
+  color: #e74c3c;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* Custom styles for Comprar button */
+.comprar-btn {
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #007bff, #00c6ff); /* Blue gradient */
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  /* Add a box-shadow for a subtle lift effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comprar-btn:hover {
+  background: linear-gradient(45deg, #0056b3, #0099cc); /* Darker gradient on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.comprar-btn:active {
+  background: linear-gradient(45deg, #004080, #006699); /* Even darker on click */
+  transform: scale(1); /* Reset zoom effect */
+}
+
+/* Add a wrapper container for the button and total price for better control */
+.comprar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.comprar-container h5 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.empty-cart-container {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px; /* Ensure there's some height even if content is small */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+}
+
+.empty-cart-content {
+  text-align: center; /* Center the text inside */
+  max-width: 600px; /* Limit width to avoid wide text */
+}
+
+#purchase-message-container {
+  background-color: #e0f7fa; /* Light blue background */
+  padding: 30px;
+  display: none; /* Hidden initially */
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.empty-cart-message {
+  font-size: 28px;
+  font-weight: bold;
+  color: #28a745;              /* Green color for the "success" message */
+  margin-bottom: 15px;
+}
+
+.empty-cart-subtext {
+  font-size: 1.2rem;           /* Smaller text size for the subtext */
+  color: #6c757d;              /* Grey color for the subtext */
+}
+
+
+.empty-cart-icon {
+  width: 100px;  /* Size of the icon */
+  height: 80px;
+  margin-bottom: 15px;  /* Space between icon and text */
+}
+
+/* Custom styles for the "bought-cart" class */
+.bought-cart {
+  display: flex;              /* Use flexbox to align content */
+  justify-content: center;    /* Center content horizontally */
+  align-items: center;        /* Center content vertically */
+  background-color: #f7f7f7;  /* Light background color (optional) */
+  border-radius: 10px;        /* Rounded corners for the card (optional) */
+  padding: 20px;              /* Padding around the content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Styling for the content inside the card */
+.bought-cart-content {
+  text-align: center;         /* Center text horizontally */
+  padding: 10px;
+}
+
+/* Styling for the main message */
+.bought-cart-message {
+  font-size: 2.5rem;           /* Larger text size for the main message */
+  color: #28a745;              /* Green color for the "success" message */
+  margin-bottom: 15px;         /* Space below the message */
+  font-weight: bold;           /* Make the message bold */
+}
+
+/* Styling for the subtext */
+.bought-cart-subtext {
+  font-size: 1.2rem;           /* Smaller text size for the subtext */
+  color: #6c757d;              /* Grey color for the subtext */
+  margin-top: 0;               /* Remove any default margin on top */
+}
+
+/* Custom styles for the "added-product" message */
+.added-product {
+  display: flex;              /* Use flexbox to align content */
+  justify-content: center;    /* Center content horizontally */
+  align-items: center;        /* Center content vertically */
+  height: 100vh;              /* Full viewport height */
+  background-color: #f7f7f7;  /* Light background color (optional) */
+  border-radius: 10px;        /* Rounded corners for the card (optional) */
+  padding: 20px;              /* Padding around the content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Styling for the content inside the card */
+.added-product-content {
+  text-align: center;         /* Center text horizontally */
+  padding: 10px;
+}
+
+/* Styling for the main message */
+.added-product-message {
+  font-size: 2rem;            /* Larger text size for the main message */
+  color: #28a745;             /* Green color for the "success" message */
+  margin-bottom: 15px;        /* Space below the message */
+  font-weight: bold;          /* Make the message bold */
+}
+
+
+/* Custom styles for the "added-product" message */
+.added-product {
+  display: flex;              /* Use flexbox to align content */
+  justify-content: center;    /* Center content horizontally */
+  align-items: center;        /* Center content vertically */
+  height: 100vh;              /* Full viewport height */
+  background-color: #f7f7f7;  /* Light background color */
+  border-radius: 10px;        /* Rounded corners for the card */
+  padding: 20px;              /* Padding around the content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Styling for the content inside the card */
+.added-product-content {
+  text-align: center;         /* Center text horizontally */
+  padding: 10px;
+}
+
+/* Styling for the main message */
+.added-product-message {
+  font-size: 2rem;            /* Larger text size for the message */
+  color: #28a745;             /* Green color for the "success" message */
+  margin-bottom: 15px;        /* Space below the message */
+  font-weight: bold;          /* Make the message bold */
+}
+
+
+
+

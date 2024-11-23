@@ -12,7 +12,6 @@ const renderProductos = (json) =>{
 
 }
 
-
 export const ProductosRender = (Busca) => {
     debugger;
     getProductosName(Busca,  renderProductos );

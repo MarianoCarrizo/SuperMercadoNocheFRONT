@@ -3,47 +3,91 @@ import { getProductos } from "../services/fetchServices.js";
 import { getProductosByCategory } from "../services/fetchServices.js";
 import { getProductosName } from "../services/fetchServices.js";
 
-// Select the search field (input element) and category checkboxes
+
 const searchField = document.getElementById("busca-box");
 const categoryCheckboxes = document.querySelectorAll('.category-checkbox');
 
-let selectedCategory = '';  // Global variable to store the selected category
+let selectedCategory = '';  
 
-// Listen for changes to the category checkboxes
-categoryCheckboxes.forEach(checkbox => {
+let noCheckbox = true; 
+
+const Checkboxes = Array.from(categoryCheckboxes);
+
+Checkboxes.forEach(checkbox => {
   checkbox.addEventListener('change', function() {
     if (this.checked) {
       selectedCategory = this.getAttribute('data-category');
-      categoryCheckboxes.forEach(otherCheckbox => {
+      Checkboxes.forEach(otherCheckbox => {
         if (otherCheckbox !== this) {
           otherCheckbox.checked = false;
         }
       });
-      // Fetch products based on the selected category
+     
       getProductosByCategory(selectedCategory, renderProductos);
+    }
+
+    noCheckbox = !Checkboxes.some(checkbox => checkbox.checked);
+
+    if (noCheckbox) {
+      console.log('No checkbox is selected');
+    } else {
+      console.log('At least one checkbox is selected');
     }
   });
 });
 
-// Event listener for "Enter" key press in the search field
 searchField.addEventListener('keypress', function(event) {
   if (event.key === 'Enter') {
-    // Get the value of the search field
-    const searchValue = searchField.value;
+    if (noCheckbox) {
+      selectedCategory = null; 
+    }
+    
+    const searchValue = searchField.value.trim(); 
 
-    // Log the selected category and search value for debugging
-    console.log("Selected Category:", selectedCategory);
-    console.log("Search Value:", searchValue);
-
-    // Fetch products based on the entered search value and selected category
-    getProductosName(searchValue, selectedCategory, renderProductos);
-
-    // Optionally handle empty or error cases (for now, this part seems redundant)
+      getProductosName(searchValue, selectedCategory, renderProductos);
+  
     if (!renderProductos) {
       console.log("No products found or there was an error.");
     }
   }
 });
+
+const containerSearch = document.querySelector('.container-search');
+
+const initialTop = containerSearch.offsetTop;
+
+const windowHeight = window.innerHeight;
+const containerHeight = containerSearch.offsetHeight;
+
+
+const stopPosition = document.documentElement.scrollHeight - windowHeight - containerHeight + 3990;
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition > initialTop) {
+    if (scrollPosition > stopPosition) {
+      containerSearch.style.position = 'sticky ';
+
+    } else {
+
+      containerSearch.style.position = 'sticky ';
+      containerSearch.style.top = '90px'; 
+    }
+  } else {   
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
 
 // Function to render products in the UI
 const renderProductos = (json) => {

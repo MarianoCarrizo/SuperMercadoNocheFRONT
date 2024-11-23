@@ -1,8 +1,11 @@
 export const CarritoVacio = () => `
-<div class="card rounded-3 mb-4">
-         
-<h1 class="col-md-12"> Carrito inexistente, Agregue productos.</h1>
-         
+<div class="empty-cart-container">
+    <div class="empty-cart-content">
+        <img src="../img/emptycart.png" alt="Empty Cart" class="empty-cart-icon">
+        <h1 class="empty-cart-message">Carrito inexistente</h1>
+        <p class="empty-cart-subtext">Agregue productos a su carrito para continuar con la compra.</p>
+    </div>
 </div>
+
 
 `
