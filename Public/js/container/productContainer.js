@@ -37,8 +37,6 @@ const renderProductos = (json, targetId) => {
             let carouselItemHTML = `<div class="carousel-item ${index === 4 ? 'active' : ''}">`;
             carouselItemHTML += `<div class="row">${cardsBatch.join('')}</div>`; 
             carouselItemHTML += `</div>`;
-
-            
             _root.innerHTML += carouselItemHTML;
 
             cardsBatch = [];

@@ -78,17 +78,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-
-
-
-
-
-
-
-
-
-
-
 // Function to render products in the UI
 const renderProductos = (json) => {
   let _root = document.getElementById("producto-lista");

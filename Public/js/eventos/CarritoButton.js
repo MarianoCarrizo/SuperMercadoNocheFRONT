@@ -1,8 +1,5 @@
 import { CarritoRender} from "../container/CarritoContainer.js";
-
-
 document.getElementById("boton-log").addEventListener("click", buscarProductos);
-
 
 
 function buscarProductos() {

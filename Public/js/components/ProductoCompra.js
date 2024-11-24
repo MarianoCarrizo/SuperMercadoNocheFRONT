@@ -1,4 +1,4 @@
-export const Producto = (nombre, marca, precio, image) => `
+export const Producto = (nombre, marca, precio, image, isUserLoggedIn) => `
 <div class="container-compra">
     <div class="card-singular">
         <!-- Image -->
@@ -25,17 +25,22 @@ export const Producto = (nombre, marca, precio, image) => `
         <h3 id="precio1" class="font-weight-semibold">$${precio}</h3>
         
         <!-- Buttons Below the Text -->
+        ${!isUserLoggedIn ? `
+          <div class="custom-alert-container">
+            <div class="custom-alert">
+                Ingrese a su cuenta para comprar
+            </div>
+        </div>
+
+        ` : `
         <div class="quantity-selector mt-3 align-items-center">
             <button type="button" class="btn btn-outline-secondary" id="decrease">-</button>
             <input type="number" class="form-control" id="compra-form" value="1" min="1" readonly>
             <button type="button" class="btn btn-outline-secondary" id="increase">+</button>
         </div>
         
-        <!-- 'Agregar' Button -->
         <button type="button" class="btn btn-primary mt-3" id="compra-button">Agregar</button>
+        `}
     </div>
 </div>
-
-
-
-`  ;
+`;

@@ -2,6 +2,7 @@
 
 const urlProductos = "https://localhost:7175/api/productos/";
 const urlProductosS = "https://localhost:7175/api/productos";
+const urlLogin = "https://localhost:7175/api/cliente/login";
 const urlCarritos = "https://localhost:7175/api/carrito/";
 const urlOrdenes = "https://localhost:7175/api/Orden";
 
@@ -233,12 +234,47 @@ export const CompraDone = (UserId,callback) => {
     })
 }
 
-export const DeleteProduct = (userId,productoId) => {
+export const DeleteProduct = (userId, productoId) => {
     fetch(`${urlCarritos}${userId}/${productoId}`, {
         method: 'DELETE'
     })
-   
-}
+    .then(response => {
+        if (response.status === 204) {
+            // Successfully deleted, no content returned
+            console.log(`Product with ID ${productoId} deleted successfully.`);
+        } else {
+            // Handle other response codes (e.g., errors)
+            console.error('Failed to delete product. Status:', response.status);
+        }
+    })
+    .catch(error => {
+        // Handle network errors or other issues
+        console.error('Error deleting product:', error);
+    });
+};
+
+export const DeleteCarrito = (carritoId) => {
+    fetch(`${urlCarritos}?carritoId=${carritoId}`, {
+        method: 'DELETE'
+    })
+    .then(response => {
+        if (response.status === 204) {
+            // Successfully deleted, no content returned
+            console.log(`Carrito with ID ${carritoId} deleted successfully.`);
+        } else {
+            // Handle other response codes (e.g., errors)
+            console.error('Failed to delete carrito. Status:', response.status);
+        }
+    })
+    .catch(error => {
+        // Handle network errors or other issues
+        console.error('Error deleting carrito:', error);
+    });
+};
+
+
+
+
 export const getCarritoById = (carritoId, callback) => {
     fetch(`${urlCarritos}?id=${carritoId}`, {
         method: 'GET'
@@ -268,3 +304,30 @@ export const getProductoById = (productoId, callback) => {
         callback(body);
     })
 }
+
+export const login = (email, password, callback) => {
+    fetch(`${urlLogin}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'accept': 'application/json',  // Adjusting header for the correct response format
+        },
+        body: JSON.stringify({ email: email, password: password }) // Send email and password
+    })
+    .then((httpResponse) => {
+        if (httpResponse.ok) {
+            return httpResponse.json();  // Parse JSON if the response is OK
+        } else {
+            throw new Error('Login failed');
+        }
+    })
+    .then(body => {
+        // Pass the response body to the callback
+        callback(body);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        callback(null);  // If an error occurs, pass null to the callback
+    });
+}
+

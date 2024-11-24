@@ -3,6 +3,7 @@
 <html lang="en">
   <head>
 	<link rel="shortcut icon" href="../img/favicon.png">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,38 +26,71 @@
 			  </a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 				<span class="navbar-toggler-icon"></span>
-			</button> <a class="navbar-brand" href="../view/Index.html">Supermercado Noche</a>
+			</button> 
+
+			<a class="navbar-brand" style="color: white;">SuperMercado Noche</a>
+
+		
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="navbar-nav">
 					<li class="navbar-light">
 						 <a class="nav-link" href="../view/Index.html">Inicio<span class="sr-only">(current)</span></a>
 					</li>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="../view/CarritoVista.html">Carrito</a>
-				<li class="nav-item">
+				</li>			
 				 <a class="nav-link" href="../view/ListaProductosVista.html">Lista De productos</a>
 			</li>
 				 
 				   <li class="nav-item">
 					<a class="nav-link" href="../view/VentasDelDiaVista.html">Ventas del día</a>
 			   </li>				
-			   <form class="form-inline" >
-			   <input class="form-control mr-sm-2"  id="Busca" placeholder="Buscar Producto..." type="text"> 
-			   <a href="../view/ListaProductosVista.html"<button Class="btn button-search my-2 my-sm-0" id="boton-busqueda" type="bttn">Buscar</button></a>
-			
-		   </form>
-		
+			   <form class="form-inline">
+				<input class="form-control mr-sm-2" id="Busca" placeholder="Buscar Producto..." type="text">
+				<button class="btn button-search my-2 my-sm-0" id="boton-busqueda" type="button">Buscar</button>
+			</form>
+
 			</div>
 				
-			<input class="form " id="ingresar-id" placeholder="Ingresar ID..." type="number"> 
-			<button Class="btn button-search my-2 my-sm-0" id="boton-log" type="bttn">Ingresar</button>
-		 
+<button class="login-btn" id="boton-log" type="button">Ingresar</button>
+<div id="greeting" style="display: none;"></div>
+<div id="collapse" style="display: none;">
+    <button id="logout-button">Deslogearse</button>
+</div>
+
+
+
+<div id="login-modal" class="login-modal">
+  <div class="login-modal-content">
+    <span class="login-close-btn" id="close-modal">&times;</span>
+    <h2 class="login-heading">Ingresar</h2>
+    <form id="login-form" class="login-form">
+      <label for="email" class="login-label">Email:</label>
+      <input type="email" id="email" class="login-input" placeholder="Email..." required><br><br>
+      
+      <label for="password" class="login-label">Contraseña:</label>
+      <div class="password-container">
+        <input type="password" id="password" class="login-input" placeholder="Contraseña..." required>
+        <span id="toggle-password" class="toggle-password-icon fas fa-eye"></span> 
+      </div>
+      <br><br>
+
+      <button type="submit" class="login-submit-btn">Ingresar</button>
+    </form>
+    <button class="login-cancel-btn" id="cancel-login">Cancelar</button>
+  </div>
+</div>
+
+
+
+
+<a class="nav-link" href="../view/CarritoVista.html" id="cart-link">
+    <img src="../img/emptycart.png" class="custom-nav-img">
+</a>
+			
 	
 		</nav>
 		<div class="container">
-			<div class="carousel slide" id="carousel-997188" data-ride="carousel" data-interval="2500" style="margin: 20px;">
-				<!-- Carousel Indicators -->
+			<div class="carousel slide" id="carousel-997188" data-ride="carousel" data-interval="3500" style="margin: 20px;">
+			
 				<ol class="carousel-indicators">
 					<li data-slide-to="0" data-target="#carousel-997188" class="active" style="background-color: #0275d8;"></li>
 					<li data-slide-to="1" data-target="#carousel-997188" style="background-color: #0275d8;"></li>
@@ -64,32 +98,28 @@
 					<li data-slide-to="3" data-target="#carousel-997188" style="background-color: #0275d8;"></li> <!-- New indicator for 4th slide -->
 				</ol>
 		
-				<!-- Carousel Inner (Slides) -->
+				
 				<div class="carousel-inner">
-					<!-- First Slide -->
 					<div class="carousel-item active">
-						<a href="https://example.com/first-slide" target="_blank">
+						<a href="../view/ListaProductosVista.html">
 							<img class="d-block w-100" alt="Carousel Bootstrap First" src="../img/header1.jpg" style="width: 100%; height: 400px; object-fit: contain; margin: 0 5px;">
 						</a>
 					</div>
-		
-					<!-- Second Slide -->
+
 					<div class="carousel-item">
-						<a href="https://example.com/second-slide" target="_blank">
+						<a href="http://localhost:3001/view/AgregarProductoSingular.html?productoId=28">
 							<img class="d-block w-100" alt="Carousel Bootstrap Second" src="../img/header2.jpg" style="width: 100%; height: 400px; object-fit: contain; margin: 0 5px;">
 						</a>
 					</div>
 		
-					<!-- Third Slide -->
 					<div class="carousel-item">
-						<a href="https://example.com/third-slide" target="_blank">
+						<a href="http://localhost:3001/view/AgregarProductoSingular.html?productoId=13">
 							<img class="d-block w-100" alt="Carousel Bootstrap Third" src="../img/header3.jpg" style="width: 100%; height: 400px; object-fit: contain; margin: 0 5px;">
 						</a>
 					</div>
 		
-					<!-- Fourth Slide -->
 					<div class="carousel-item">
-						<a href="https://example.com/fourth-slide" target="_blank">
+						<a href="http://localhost:3001/view/AgregarProductoSingular.html?productoId=29">
 							<img class="d-block w-100" alt="Carousel Bootstrap Fourth" src="../img/header4.jpg" style="width: 100%; height: 400px; object-fit: contain; margin: 0 5px;">
 						</a>
 					</div>
@@ -103,18 +133,13 @@
 				
 		<div class = "container">
 			
-
-			<!-- First Carousel -->
-<div id="productos-carousel-1" class="carousel slide" data-ride="carousel" style="margin-top:25px;">
+<div id="productos-carousel-1" class="carousel slide" data-ride="carousel" style="margin-top:25px;" data-interval="6000">
     <div class="carousel-inner" id="productos-category-1">
-        <!-- Cards will be inserted here dynamically for carousel 1 -->
     </div>
-    <!-- Left control -->
     <a class="carousel-control-prev" href="#productos-carousel-1" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <!-- Right control -->
     <a class="carousel-control-next" href="#productos-carousel-1" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
@@ -124,41 +149,38 @@
 
 
 <div class="image-container">
-    <a href="https://example.com/image1" target="_blank">
+    <a href="http://localhost:3001/view/ListaProductosVista.html">
         <img src="../img/boton1.jpg" alt="Image 1" class="image">
     </a>
-    <a href="https://example.com/image2" target="_blank">
+    <a href="http://localhost:3001/view/ListaProductosVista.html">
         <img src="../img/boton2.jpg" alt="Image 2" class="image">
     </a>
 </div>
 
 <div class="image-container">
-    <a href="https://example.com/jabonOferta" target="_blank">
+    <a href="http://localhost:3001/view/AgregarProductoSingular.html?productoId=29">
         <img src="../img/jabonOferta.jpg" alt="Jabon Oferta" class="image-oferta">
     </a>
 </div>
 
 <div class="image-container">
-    <a href="https://example.com/cuidadoRopa" target="_blank">
+    <a href="http://localhost:3001/view/ListaProductosVista.html">
         <img src="../img/cuidadoRopa.jpg" alt="Image 1" class="image">
     </a>
-    <a href="https://example.com/productosAlmacen" target="_blank">
+    <a href="http://localhost:3001/view/ListaProductosVista.html">
         <img src="../img/productosAlmacen.jpg" alt="Image 2" class="image">
     </a>
 </div>
 
 
-			<!-- Second Carousel -->
-<div id="productos-carousel-2" class="carousel slide" data-ride="carousel" style="margin-top:20px;">
-    <div class="carousel-inner" id="productos-category-2">
-        <!-- Cards will be inserted here dynamically for carousel 2 -->
+		
+<div id="productos-carousel-2" class="carousel slide" data-ride="carousel" style="margin-top:20px;" data-interval="6000">
+    <div class="carousel-inner" id="productos-category-2">  
     </div>
-    <!-- Left control -->
     <a class="carousel-control-prev" href="#productos-carousel-2" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <!-- Right control -->
     <a class="carousel-control-next" href="#productos-carousel-2" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
@@ -166,21 +188,18 @@
 </div>
 
 <div class="image-container">
-    <a href="https://example.com/jabonOferta" target="_blank">
+    <a href="http://localhost:3001/view/AgregarProductoSingular.html?productoId=24">
         <img src="../img/doveoferta2.jpg" alt="Jabon Oferta" class="image-oferta">
     </a>
 </div>
 
-<div id="productos-carousel-3" class="carousel slide" data-ride="carousel" style="margin-top:20px;">
+<div id="productos-carousel-3" class="carousel slide" data-ride="carousel" style="margin-top:20px;" data-interval="6000">
     <div class="carousel-inner" id="productos-category-3">
-        <!-- Cards will be inserted here dynamically for carousel 3 -->
     </div>
-    <!-- Left control -->
     <a class="carousel-control-prev" href="#productos-carousel-3" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <!-- Right control -->
     <a class="carousel-control-next" href="#productos-carousel-3" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
@@ -194,10 +213,8 @@
 
 	<div class="container" style="max-width: 1200px; margin: 0 auto;">
   
-	  <!-- Main Section -->
 	  <div class="footer-content" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; padding: 20px 20px;">
-  
-		<!-- Left: Favicon Logo -->
+
 		<div class="left-section" style="flex-basis: 15%; display: flex; justify-content: center; align-items: center; margin-bottom: 20px; padding-right: 10px;">
 		  <img src="../img/favicon.png" alt="Favicon Logo" style="width: 50px; height: 50px;">
 		  <div style="font-weight: bold; font-size: 18px; color: black; margin-top: 10px; text-align: center;">
@@ -205,10 +222,8 @@
 		  </div>
 		</div>
   
-		<!-- Left-center: Links de Interés and Social Media -->
 		<div class="left-center" style="flex-basis: 30%; display: flex; flex-direction: column; font-size: 16px; margin-bottom: 20px; padding-right: 10px;">
 		  
-		  <!-- Links de Interés -->
 		  <div class="links-title" style="font-weight: bold; margin-bottom: 10px; color: black;">Links de interés</div>
 		  <a href="#" style="text-decoration: none; color: black; margin-bottom: 8px;">Preguntas frecuentes</a>
 		  <a href="#" style="text-decoration: none; color: black; margin-bottom: 8px;">Medios de pago y envíos</a>
@@ -216,24 +231,20 @@
 		  <a href="#" style="text-decoration: none; color: black; margin-bottom: 8px;">Aviso de Privacidad</a>
 		  <a href="#" style="text-decoration: none; color: black; margin-bottom: 8px;">Aviso de Cookies</a>
 		  
-		  <!-- Social Media -->
 		  <div class="links-title" style="font-weight: bold; margin-top: 20px; color: black;">Redes Sociales</div>
 		  <a href="https://www.instagram.com" style="text-decoration: none; color: black; margin-bottom: 8px;">Instagram</a>
 		  <a href="https://www.facebook.com" style="text-decoration: none; color: black; margin-bottom: 8px;">Facebook</a>
 		  <a href="https://www.linkedin.com" style="text-decoration: none; color: black; margin-bottom: 8px;">Linkedin</a>
 		</div>
   
-		<!-- Right-center: Atención al Cliente -->
 		<div class="right-center" style="flex-basis: 45%; display: flex; flex-direction: column; font-size: 16px; margin-bottom: 20px;">
 		  <div class="atencion-title" style="font-weight: bold; margin-bottom: 10px; color: black;">Atención al cliente</div>
 		  <a href="mailto:contacto@example.com" style="text-decoration: none; color: black; margin-bottom: 8px;">Escribinos</a>
 		  <a href="tel:08004440570" style="text-decoration: none; color: black; margin-bottom: 8px;">0800 444 0570</a>
 		  <a href="https://wa.me/1234567890" style="text-decoration: none; color: black; margin-bottom: 8px;">Contacto por Whatsapp</a>
 		  
-		  <!-- Operating Hours -->
 		  <div class="horario" style="margin-top: 20px; color: black;">Horario de Atención: Lunes a Viernes de 9 a 18 hs</div>
 		  
-		  <!-- Legal Notices -->
 		  <div class="legal-notices" style="margin-top: 20px;">
 			<a href="#" style="text-decoration: none; color: black; margin-bottom: 8px;">Botón Arrepentimiento</a>
 			<a href="#" style="text-decoration: none; color: black;">Defensa de las y los Consumidores Para reclamos. Ingrese aquí</a>
@@ -260,8 +271,10 @@
 
 
 <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script type="module" src="../js/init.js"></script>
-<script type="module" src="../js/eventos/SearchButton.js"></script>
+<script type="module" src="../js/eventos/SearchHandler.js"></script>
 <script type="module" src="../js/eventos/LoginButton.js"></script>
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>

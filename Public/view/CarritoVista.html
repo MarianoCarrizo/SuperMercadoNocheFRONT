@@ -21,16 +21,12 @@
 			  </a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 				<span class="navbar-toggler-icon"></span>
-			</button> <a class="navbar-brand" href="../view/Index.html">Supermercado Noche</a>
+			</button>	<a class="navbar-brand" style="color: white;">SuperMercado Noche</a>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="navbar-nav">
 					<li class="navbar-light">
 						 <a class="nav-link" href="../view/Index.html">Inicio<span class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="../view/CarritoVista.html">Carrito</a>
-
-				</li>
 				<li class="nav-item">
 				 <a class="nav-link" href="../view/ListaProductosVista.html">Lista De productos</a>
 			</li>
@@ -39,61 +35,56 @@
 					<a class="nav-link" href="../view/VentasDelDiaVista.html">Ventas del día</a>
 			   </li>				
 			   <form class="form-inline">
-				<input class="form-control mr-sm-2" id="Busca" placeholder="Buscar Producto..." type="text"> 
-				<a href="../view/ListaProductosVista.html"<button Class="btn button-search my-2 my-sm-0" id="boton-busqueda" type="bttn">Buscar</button></a>
-			 
+				<input class="form-control mr-sm-2" id="Busca" placeholder="Buscar Producto..." type="text">
+
+				<button class="btn button-search my-2 my-sm-0" id="boton-busqueda" type="button">Buscar</button>
 			</form>
+			
 		
 			</div>
-			
-				<input class="form " id="ingresar-id" placeholder="Ingresar ID..." type="number"> 
-				<button Class="btn button-search my-2 my-sm-0" id="boton-log" type="bttn">Ingresar</button>
+			>
+<button class="login-btn" id="boton-log" type="button">Ingresar</button>
+<div id="greeting" style="display: none;"></div>
+<div id="collapse" style="display: none;">
+    <button id="logout-button">Deslogearse</button>
+</div>
+
+
+<div id="login-modal" class="login-modal">
+	<div class="login-modal-content">
+	  <span class="login-close-btn" id="close-modal">&times;</span>
+	  <h2 class="login-heading">Ingresar</h2>
+	  <form id="login-form" class="login-form">
+		<label for="email" class="login-label">Email:</label>
+		<input type="email" id="email" class="login-input" placeholder="Email..." required><br><br>
+		
+		<label for="password" class="login-label">Contraseña:</label>
+		<div class="password-container">
+		  <input type="password" id="password" class="login-input" placeholder="Contraseña..." required>
+		  <span id="toggle-password" class="toggle-password-icon fas fa-eye"></span> 
+		</div>
+		<br><br>
+  
+		<button type="submit" class="login-submit-btn">Ingresar</button>
+	  </form>
+	  <button class="login-cancel-btn" id="cancel-login">Cancelar</button>
+	</div>
+  </div>
+  
+
+
+
+			<a class="nav-link" href="../view/CarritoVista.html" id="cart-link">
+				<img src="../img/emptycart.png" class="custom-nav-img">
+			</a>
 			 
 		
 		</nav>
 
-		<div class="container">
-			<div class="carousel slide" id="carousel-997188" data-ride="carousel" data-interval="2500" style="margin: 20px;">
-				<!-- Carousel Indicators -->
-				<ol class="carousel-indicators">
-					<li data-slide-to="0" data-target="#carousel-997188" class="active" style="background-color: #0275d8;"></li>
-					<li data-slide-to="1" data-target="#carousel-997188" style="background-color: #0275d8;"></li>
-					<li data-slide-to="2" data-target="#carousel-997188" style="background-color: #0275d8;"></li>
-					<li data-slide-to="3" data-target="#carousel-997188" style="background-color: #0275d8;"></li> <!-- New indicator for 4th slide -->
-				</ol>
+		<div class="image-container">
+			<img src="../img/productListBanner.jpg" alt="Jabon Oferta" class="image-oferta">
 		
-				<!-- Carousel Inner (Slides) -->
-				<div class="carousel-inner">
-					<!-- First Slide -->
-					<div class="carousel-item active">
-						<a href="https://example.com/first-slide" target="_blank">
-							<img class="d-block w-100" alt="Carousel Bootstrap First" src="../img/header1.jpg" style="width: 100%; height: 400px; object-fit: contain; margin: 0 10px;">
-						</a>
-					</div>
-		
-					<!-- Second Slide -->
-					<div class="carousel-item">
-						<a href="https://example.com/second-slide" target="_blank">
-							<img class="d-block w-100" alt="Carousel Bootstrap Second" src="../img/header2.jpg" style="width: 100%; height: 400px; object-fit: contain; margin: 0 10px;">
-						</a>
-					</div>
-		
-					<!-- Third Slide -->
-					<div class="carousel-item">
-						<a href="https://example.com/third-slide" target="_blank">
-							<img class="d-block w-100" alt="Carousel Bootstrap Third" src="../img/header3.jpg" style="width: 100%; height: 400px; object-fit: contain; margin: 0 10px;">
-						</a>
-					</div>
-		
-					<!-- Fourth Slide -->
-					<div class="carousel-item">
-						<a href="https://example.com/fourth-slide" target="_blank">
-							<img class="d-block w-100" alt="Carousel Bootstrap Fourth" src="../img/header4.jpg" style="width: 100%; height: 400px; object-fit: contain; margin: 0 10px;">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
+	</div>
 		</div>
 	</div>
 </div>
@@ -175,8 +166,8 @@
 </div>
 <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
 <script type="module" src="../js/CarritoInit.js"></script>
+<script type="module" src="../js/eventos/SearchHandler.js"></script>
 <script type="module" src="../js/eventos/LoginButton.js"></script>
-
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/scripts.js"></script>

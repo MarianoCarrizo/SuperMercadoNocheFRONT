@@ -7,34 +7,39 @@ const bindButtonEvents = () => {
     const increaseButton = document.getElementById('increase');
     const compraButton = document.getElementById('compra-button');
     const compraInput = document.getElementById('compra-form');
+    const userId = localStorage.getItem("UserId");
+    
+    if (!userId || userId === '') {  
+        if (decreaseButton) decreaseButton.style.display = 'none';
+        if (increaseButton) increaseButton.style.display = 'none';
+        if (compraButton) compraButton.style.display = 'none';
+        if (compraInput) compraInput.style.display = 'none'; 
+    } else {
 
-    if (decreaseButton && increaseButton && compraButton) {
-        
-        decreaseButton.addEventListener('click', function () {
-            let cantidad = parseInt(compraInput.value);
-            if (cantidad > 1) {
-                compraInput.value = cantidad - 1;
-            }
-        });
+        if (decreaseButton) {
+            decreaseButton.addEventListener('click', function () {
+                let cantidad = parseInt(compraInput.value);
+                if (cantidad > 1) {
+                    compraInput.value = cantidad - 1;
+                }
+            });
+        }
 
-        increaseButton.addEventListener('click', function () {
-            let cantidad = parseInt(compraInput.value);
-            compraInput.value = cantidad + 1;
-        });
+        if (increaseButton) {
+            increaseButton.addEventListener('click', function () {
+                let cantidad = parseInt(compraInput.value);
+                compraInput.value = cantidad + 1;
+            });
+        }
 
-        compraButton.addEventListener('click', function () {
-            console.log("Se escucha el evento Agregar");
-
-            let cantidad = compraInput.value;
-            let userId = localStorage.getItem("UserId"); 
-            let productoId = localStorage.getItem("productoId"); 
-
-            console.log("Cantidad:", cantidad);
-            console.log("UserId:", userId);
-            console.log("ProductoId:", productoId);
-
-            AgregadoRender(cantidad, userId, productoId); 
-        });
+        if (compraButton) {
+            compraButton.addEventListener('click', function () {
+                let cantidad = compraInput.value;
+                let userId = localStorage.getItem("UserId");
+                let productoId = localStorage.getItem("productoId"); 
+                AgregadoRender(cantidad, userId, productoId); 
+            });
+        }
     }
 };
 
@@ -46,16 +51,12 @@ const renderProductos = (json) => {
     let precio = json.precio;
     let image = json.image;
     let id = json.productoId; 
-
-    _root.innerHTML = Producto(nombre, marca, precio, image, id);
-    
-    console.log("ProductoId:", id);
+    const isUserLoggedIn = localStorage.getItem("UserId") !== null;
+    _root.innerHTML = Producto(nombre, marca, precio, image, isUserLoggedIn);
 
     bindButtonEvents();
 }
 
 export const SingleProductRender = (id) => {
-
     getProductoById(localStorage.getItem("productoId"), renderProductos);  
 }
-

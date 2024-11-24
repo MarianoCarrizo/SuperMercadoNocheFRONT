@@ -6,19 +6,10 @@ const renderCompra = (json) =>{
    
     let _root = document.getElementById("carrito-card");
         _root.innerHTML+=compraDone("");
-
-
 }
-
-
-
 
 export const compraRender = (clienteid) => {
 
     CompraDone(clienteid, renderCompra)
-        
 
-
-
-    
 }

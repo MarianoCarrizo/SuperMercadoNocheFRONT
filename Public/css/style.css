@@ -121,18 +121,19 @@
 
 
 .button-search {
-    background-color: #025fb1; 
-    border: none;
-    color: rgb(255, 255, 255);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    text-align: center;
-    display: table;
-    margin: 0 auto;
-    padding: 8px 10px;
-    border-radius: 10px;
-    block-size: auto;
-    width: 80px;
-    text-decoration: none;
+  background: linear-gradient(45deg, #007bff, #00c6ff); /* Blue gradient */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Rounded corners */
+  padding: 15px 30px; /* Larger padding for a more substantial button */
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase; /* Uppercase text */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  width: auto;
+  display: inline-block;
   }
   .dropdown-item:hover{
     background-color: #025aa5;
@@ -521,6 +522,32 @@ form.Cen {
 }
 /* Add to cart button */
 #compra-button {
+  background: linear-gradient(45deg, #007bff, #00c6ff); /* Blue gradient */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Rounded corners */
+  padding: 15px 30px; /* Larger padding for a more substantial button */
+  font-weight: 600;
+  text-transform: uppercase; /* Uppercase text */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  width: auto;
+  display: inline-block;
+  width: 100%;
+  padding: 14px;
+  font-size: 1.2rem;
+}
+
+body, html {
+  overflow-x: hidden;   /* Prevent horizontal scroll */
+  overflow-y: auto;     /* Ensure vertical scroll only if needed */
+}
+
+
+
+#compra-button:hover{
+  background: linear-gradient(45deg, #0056b3, #0099cc); /* Darker gradient on hover */
   width: 100%;
   padding: 14px;
   font-size: 1.2rem;
@@ -830,6 +857,7 @@ form.Cen {
 }
 
 .empty-cart-container {
+  text-transform: none;
   background-color: #f8f9fa; /* Light background color */
   padding: 30px;
   display: flex;
@@ -842,6 +870,7 @@ form.Cen {
 }
 
 .empty-cart-content {
+  text-transform: none;
   text-align: center; /* Center the text inside */
   max-width: 600px; /* Limit width to avoid wide text */
 }
@@ -856,6 +885,7 @@ form.Cen {
 }
 
 .empty-cart-message {
+  text-transform: none;
   font-size: 28px;
   font-weight: bold;
   color: #28a745;              /* Green color for the "success" message */
@@ -863,6 +893,7 @@ form.Cen {
 }
 
 .empty-cart-subtext {
+  text-transform: none;
   font-size: 1.2rem;           /* Smaller text size for the subtext */
   color: #6c757d;              /* Grey color for the subtext */
 }
@@ -876,6 +907,7 @@ form.Cen {
 
 /* Custom styles for the "bought-cart" class */
 .bought-cart {
+  text-transform: none;
   display: flex;              /* Use flexbox to align content */
   justify-content: center;    /* Center content horizontally */
   align-items: center;        /* Center content vertically */
@@ -893,6 +925,7 @@ form.Cen {
 
 /* Styling for the main message */
 .bought-cart-message {
+  text-transform: none;
   font-size: 2.5rem;           /* Larger text size for the main message */
   color: #28a745;              /* Green color for the "success" message */
   margin-bottom: 15px;         /* Space below the message */
@@ -958,6 +991,588 @@ form.Cen {
   margin-bottom: 15px;        /* Space below the message */
   font-weight: bold;          /* Make the message bold */
 }
+
+/* Styling for the modal popup */
+.carrito-delete-popup {
+  text-transform: none;
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  z-index: 1000; /* Ensure the modal is above everything else */
+}
+
+/* Overlay behind the popup */
+.popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1; /* Overlay under the popup content */
+}
+
+/* The content inside the popup */
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 2;
+  width: 300px;
+  text-align: center;
+  max-width: 100%;
+}
+
+/* Image styling for the product in the popup */
+.popup-product-img {
+  width: 200px; /* Adjusted smaller size */
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+/* Styling for the buttons in the popup */
+/* General button styling */
+.popup-btn {
+  text-transform: none;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.confirm-delete {
+  background: linear-gradient(45deg, #007bff, #00c6ff); /* Blue gradient */
+}
+
+/* Hover effects for all buttons */
+.popup-btn:hover {
+  background: linear-gradient(45deg, #0056b3, #0099cc); /* Darker gradient on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Specific styles for the "Cancel" button */
+.carrito-delete-popup .cancel-delete {
+  background-color: #999; /* Gray color for the "No" button */
+}
+
+.carrito-delete-popup .cancel-delete:hover {
+  background-color: #666; /* Darker gray on hover */
+}
+
+.trash-icon {
+  width: 30px; /* Adjust size */
+  height: 20px;
+}
+/* Clase para ocultar el mensaje cuando no hay productos */
+.no-product {
+  display: none; /* Inicialmente oculto */
+  position: fixed; /* Asegura que el mensaje esté fijo en la pantalla */
+  top: -10;  /* Asegura que esté en la parte superior de la pantalla */
+  left: 50%; /* Centra el mensaje horizontalmente */
+  transform: translateX(-50%); /* Ajusta el contenedor para centrarlo perfectamente */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  z-index: 9999; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Contenido del mensaje de "Producto inexistente" */
+.no-product-content {
+  text-align: center; 
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #ccc;    /* Border for the button */
+  border-radius: 8px; /* Rounded corners for the card */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Keep shadow for depth */
+  max-width: 600px; /* Max ancho para el mensaje */
+  width: 90%; /* Asegura que no sea más ancho que el 90% de la pantalla */
+  z-index: 10000; /* Asegura que el mensaje está por encima del fondo */
+}
+
+/* Ícono del mensaje */
+.no-product-icon {
+  width: 150px; /* Ajusté el tamaño */
+  margin-bottom: 20px;
+}
+
+/* Título del mensaje */
+.no-product-message {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: none;
+  color: #dc3545;
+  margin-bottom: 10px;
+}
+
+/* Subtexto del mensaje */
+.no-product-subtext {
+  font-size: 18px;
+  color: #6c757d;
+  text-transform: none;
+  margin-top: 10px;
+}
+
+
+.custom-alert {
+  background-color: #f8d7da;  /* Soft red background */
+  color: #721c24;  /* Dark red text */
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: none;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Animation for the alert to fade in */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+.custom-nav-img {
+  width: 40px;  /* Adjust the size of the image */
+  height: auto;  /* Maintain the aspect ratio */
+  display: block;
+  margin: 0 auto;  /* Center the image */
+  transition: transform 0.3s ease;  /* Add smooth transition for hover effect */
+}
+
+a.nav-link {
+  margin-top: 2px; /* Add space between the button and the cart icon */
+}
+
+
+
+/* Hover effect on the cart icon */
+.custom-nav-img:hover {
+  transform: scale(1.1);
+}
+
+
+.login-btn {
+  background: linear-gradient(45deg, #007bff, #00c6ff); /* Blue gradient */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Rounded corners */
+  padding: 12px 25px; /* Larger padding for a more substantial button */
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase; /* Uppercase text */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  width: auto;
+  display: inline-block;
+}
+
+.login-btn:hover {
+  background: linear-gradient(45deg, #0056b3, #0099cc); /* Darker gradient on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: translateY(-4px); /* Slightly lift the button on hover */
+}
+
+.login-btn:active {
+  color: #00a6dd; /* Green on hover */
+  transform: translateY(2px); /* Push button down slightly when clicked */
+}
+
+.login-btn:focus {
+  outline: none; /* Remove the default focus outline */
+}
+
+ /* The Modal */
+ .login-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  padding-top: 120px;
+  animation: fadeIn 0.4s ease-in-out; /* Fade-in animation */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#login-modal .login-modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 400px; /* Adjust to desired modal width */
+  padding: 20px;
+  position: relative; /* Relative positioning to contain absolute elements */
+}
+
+/* Modal Content */
+.login-modal-content {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+  width: 400px; /* Adjust to desired modal width */
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease-in-out; /* Slide-in effect */
+}
+/* Close button inside the modal */
+#close-modal {
+  position: absolute; /* Position it absolutely inside the modal */
+  top: 10px; /* Adjust top distance */
+  right: 10px; /* Adjust right distance */
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#close-modal:hover {
+  color: rgb(0, 123, 255); /* Change color on hover */
+}
+/* Slide-in animation */
+@keyframes slideIn {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Close Button */
+.login-close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.login-close-btn:hover,
+.login-close-btn:focus {
+  color: #000;
+}
+
+/* Heading */
+.login-heading {
+  
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Form Inputs */
+.login-label {
+  font-size: 14px;
+  text-transform: none;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.login-input {
+
+  text-transform: none;
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.login-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Password container for eye icon */
+.password-container {
+  text-transform: none;
+  position: relative;
+  width: 100%;
+}
+
+.toggle-password-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.toggle-password-icon:hover {
+  color: #00a6dd; /* Green on hover */
+}
+
+/* Buttons */
+.login-submit-btn,
+.login-cancel-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Submit Button */
+.login-submit-btn {
+  background: linear-gradient(45deg, #007bff, #00c6ff); /* Blue gradient */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Rounded corners */
+  padding: 12px 25px; /* Padding to make the button bigger */
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase; /* Uppercase text */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+  display: inline-block;
+  color: white;
+}
+
+.login-submit-btn:hover {
+  background: linear-gradient(45deg, #0056b3, #0099cc); /* Darker gradient on hover */
+}
+
+/* Cancel Button */
+.login-cancel-btn {
+  background-color: #f443367c; /* Red */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Rounded corners */
+  padding: 12px 25px; /* Padding to make the button bigger */
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase; /* Uppercase text */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+  display: inline-block;
+}
+
+.login-cancel-btn:hover {
+  background-color: #300504; /* Darker red */
+}
+
+/* Button group container */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.button-group button {
+  width: 48%;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .login-modal-content {
+    width: 90%; /* Modal takes 90% of the screen width on small devices */
+    padding: 20px;
+  }
+}
+
+/* Style the Buscar Button */
+#Order-button {
+  background: linear-gradient(45deg, #007bff, #00c6ff); /* Blue gradient */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Rounded corners */
+  padding: 12px 25px; /* Padding to make the button bigger */
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase; /* Uppercase text */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+  display: inline-block;
+}
+
+#Order-button:hover {
+  background: linear-gradient(45deg, #0056b3, #0099cc); /* Darker gradient on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  transform: translateY(-4px); /* Slightly lift the button on hover */
+}
+
+#Order-button:active {
+  background: #2575fc; /* Solid blue when clicked */
+  transform: translateY(2px); /* Button presses down when clicked */
+}
+
+#Order-button:focus {
+  outline: none; /* Remove the default focus outline */
+}
+
+/* General Table Styles */
+.table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+}
+
+.table thead {
+  background-color: #007bff;
+  color: white;
+}
+
+.table th, .table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  font-weight: bold;
+}
+
+.table tbody tr:hover {
+  background-color: #e9f3ff;
+  cursor: pointer;
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+
+}
+
+.pagination li {
+  list-style: none;
+  margin: 0 2px;
+}
+
+.pagination li a {
+ 
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination li a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Active page styling */
+.pagination li.active a {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Disabled page link styling */
+.pagination li.disabled a {
+  color: #ccc;
+  border: 1px solid #ccc;
+  pointer-events: none;
+}
+
+
+
+/* General styles for body and modal */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the greeting text */
+#greeting {
+  display: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  white-space: nowrap; /* Esto asegura que el texto esté en la misma línea */
+
+  text-align: left; /* Alineación del texto a la izquierda */
+  cursor: default; /* Esto hace que el cursor no cambie al pasar el ratón */
+}
+
+
+
+/* Styling for the collapse section */
+#collapse {
+  display: none;
+  margin-top: 10px;
+}
+
+#logout-button {
+  padding: 8px 15px;
+  background: linear-gradient(45deg, #007bff, #00c6ff); /* Blue gradient */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Rounded corners */
+  padding: 12px 25px; /* Padding to make the button bigger */
+  margin-top: -20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase; /* Uppercase text */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+  display: inline-block;
+}
+
+#logout-button:hover {
+  background: linear-gradient(45deg, #0056b3, #0099cc); /* Darker gradient on hover */
+}
+
+
+
 
 
 

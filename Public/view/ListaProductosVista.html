@@ -21,15 +21,12 @@
 			  </a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 				<span class="navbar-toggler-icon"></span>
-			</button> <a class="navbar-brand" href="../view/Index.html">Supermercado Noche</a>
+			</button> 	<a class="navbar-brand" style="color: white;">SuperMercado Noche</a>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="navbar-nav">
 					<li class="navbar-light">
 						 <a class="nav-link" href="../view/Index.html">Inicio<span class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="../view/CarritoVista.html">Carrito</a>
-				</li>
 				<li class="nav-item">
 				 <a class="nav-link" href="../view/ListaProductosVista.html">Lista De productos</a>
 			</li>
@@ -38,16 +35,50 @@
 					<a class="nav-link" href="../view/VentasDelDiaVista.html">Ventas del día</a>
 			   </li>				
 			   <form class="form-inline">
-			   <input class="form-control mr-sm-2" id="Busca" placeholder="Buscar Producto..." type="text"> 
-			   <button Class="btn button-search my-2 my-sm-0" id="boton-busqueda" type="bttn">Buscar</button>
+				<input class="form-control mr-sm-2" id="Busca" placeholder="Buscar Producto..." type="text">
+				<button class="btn button-search my-2 my-sm-0" id="boton-busqueda" type="button">Buscar</button>
+			</form>
 			
-		   </form>
 		
 			</div>
 				
-			<input class="form " id="ingresar-id" placeholder="Ingresar ID..." type="number"> 
-			<button Class="btn button-search my-2 my-sm-0" id="boton-log" type="bttn">Ingresar</button>
-		 
+<button class="login-btn" id="boton-log" type="button">Ingresar</button>
+
+<div id="greeting" style="display: none;"></div>
+
+<div id="collapse" style="display: none;">
+    <button id="logout-button">Deslogearse</button>
+</div>
+
+
+
+<div id="login-modal" class="login-modal">
+	<div class="login-modal-content">
+	  <span class="login-close-btn" id="close-modal">&times;</span>
+	  <h2 class="login-heading">Ingresar</h2>
+	  <form id="login-form" class="login-form">
+		<label for="email" class="login-label">Email:</label>
+		<input type="email" id="email" class="login-input" placeholder="Email..." required><br><br>
+		
+		<label for="password" class="login-label">Contraseña:</label>
+		<div class="password-container">
+		  <input type="password" id="password" class="login-input" placeholder="Contraseña..." required>
+		  <span id="toggle-password" class="toggle-password-icon fas fa-eye"></span>
+		</div>
+		<br><br>
+  
+		<button type="submit" class="login-submit-btn">Ingresar</button>
+	  </form>
+	  <button class="login-cancel-btn" id="cancel-login">Cancelar</button>
+	</div>
+  </div>
+  
+
+
+
+			<a class="nav-link" href="../view/CarritoVista.html" id="cart-link">
+				<img src="../img/emptycart.png" class="custom-nav-img">
+			</a>
 	
 		</nav>
 
@@ -83,7 +114,19 @@
             </div>
         </div> 
     </div>
-	<div id="producto-lista" class="product-list"></div>
+
+<div id="producto-lista" class="product-list"></div>
+
+<div id="no-product-message" class="no-product" style="display: none;">
+    <div class="no-product-content">
+        <img src="../img/emptycart.png" alt="Empty Cart" class="no-product-icon">
+        <h1 class="no-product-message">Producto inexistente</h1>
+        <p class="no-product-subtext">Busque otro producto!</p>
+    </div>
+</div>
+
+
+
     
 </div>
 	<div class="footer-section" style="width: 100%; padding: 20px 0; background-color: transparent; border-top: 0.5px solid rgba(0, 0, 0, 0.1); border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);">
@@ -140,9 +183,11 @@
 	</div>
 </div>
 <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script type="module" src="../js/initList.js"></script>
-<script type="module" src="../js/eventos/LoginButton.js"></script>
 <script type="module" src="../js/eventos/SearchButton.js"></script>
+<script type="module" src="../js/eventos/LoginButton.js"></script>
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
   </body>
