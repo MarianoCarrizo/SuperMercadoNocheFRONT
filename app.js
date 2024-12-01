@@ -7,10 +7,7 @@ const router = express.Router();
 router.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/public/view/index.html'));
 });
-/*router.get('/login',function(req,res){
-    res.sendFile(path.join(__dirname+'/public/view/login.html'));
-});
-*/
+
 app.use(express.static(path.join(__dirname, '/public')));
 //add the router
 app.use('/', router);

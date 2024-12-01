@@ -22,124 +22,85 @@
     transition:width none;
 }
 
-/* Style for the navigation arrows with light blue background */
-
 .carousel-control-next,
 .carousel-control-prev {
-  top: 50%;            /* Vertically center the arrows */
-  transform: translateY(-60%); /* Adjust for exact vertical centering */
+  top: 50%;           
+  transform: translateY(-60%); 
   z-index: 1;
-  width: 10%;           /* Adjust the width of the arrows */
+  width: 10%;          
 }
-
 
 .carousel-control-prev {
-  left: -80px; /* Move left arrow outside */
+  left: -80px; 
 }
-
 .carousel-control-next {
-  right: -80px; /* Move right arrow outside */
+  right: -80px; 
 }
-
-
-/* Increase the size of the arrows */
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   
-  background-color: #0361b4; /* Light blue color for the arrows */
-  width: 40px;
+  background-color: #0361b4;   width: 40px;
   height: 40px;
-  border-radius: 50%; /* Make the arrows circular */
-  padding: 5%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Black shadow for depth */
-}
+  border-radius: 50%;   padding: 5%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); }
 
-/* Change the color of unselected indicators to blue */
 .carousel-indicators li {
-  background-color: #003366; /* Light Blue */  /* Dark Blue */
-}
+  background-color: #003366; }
 
-/* Change the color of the selected indicator to dark blue */
 .carousel-indicators .active {
-  background-color: #0275d8; /* Dark Blue */
-}
+  background-color: #0275d8; }
 
 
 
 .carousel-item {
   height: 100%;
-  justify-content: center; /* Horizontally center the card inside the carousel */
- 
+  justify-content: center;  
 
 }
 
 .card-title {
   font-size: 16px;
-  overflow: hidden; /* Hides any text that exceeds the width */
-  display: block; /* Forces it to behave as a block */
-  max-width: 10%; /* Ensures text stays within bounds */
-}
+  overflow: hidden;   display: block;   max-width: 10%; }
 
 
 
 
-/* Remove default link styles */
 .product-link {
-  color: inherit; /* Inherit color from parent (black or any text color) */
-  color: #007bff; /* Slight blue color on hover to indicate it's clickable */
-  text-decoration: none; /* Remove underline */
-  cursor: pointer; /* Keep the cursor as a pointer to indicate clickability */
-}
+  color: inherit;   color: #007bff;   text-decoration: none;   cursor: pointer; }
 
-/* Optional: Add a subtle hover effect */
 .product-link:hover {
   
-  text-decoration: solid; /* Add an underline on hover for interactivity */
-}
+  text-decoration: solid; }
 
 .card-compra-singular-img {
   width: 100%;
-  height: 100%; /* Set a fixed height for images */
-  object-fit: contain; /* Ensure the image doesn't stretch */
-
+  height: 100%;   object-fit: contain; 
 }
 .card-img {
   width: 150px;
-  height: 150px; /* Set a fixed height for images */
-  object-fit: contain; /* Ensure the image doesn't stretch */
-}
+  height: 150px;   object-fit: contain; }
 
-/* Set a fixed min-height for the card body to make the card more uniform */
 .card-body.bg-light {
-  min-height: 180px; /* Set this to control the uniform height of cards */
-}
+  min-height: 180px; }
 
 .carousel-item .card-container {
-  margin-bottom: 50px; /* Remove any margin below each card container */
-}
+  margin-bottom: 50px; }
 
 
 .button-search {
-  background: linear-gradient(45deg, #007bff, #00c6ff); /* Blue gradient */
-  color: white;
+  background: linear-gradient(45deg, #007bff, #00c6ff);   color: white;
   border: none;
-  border-radius: 50px; /* Rounded corners */
-  padding: 15px 30px; /* Larger padding for a more substantial button */
-  font-size: 14px;
+  border-radius: 50px;   padding: 15px 30px;   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase; /* Uppercase text */
-  cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  width: auto;
+  text-transform: uppercase;   cursor: pointer;
+  transition: all 0.3s ease;   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   width: auto;
   display: inline-block;
   }
   .dropdown-item:hover{
     background-color: #025aa5;
   }
   
-/* Navbar customization */
 .navbar {
   padding: 0.5rem 1rem;
 }
@@ -150,7 +111,6 @@
 .carousel {
   position: relative;
 }
-/* Carousel customization */
 .carousel-caption {
  
   background: rgba(0, 0, 0, 0.5);
@@ -160,33 +120,19 @@
 
 
 .text-success {
-  color: green; /* Change this if you want a different color for the price */
-}
+  color: green; }
 
-/* Product cards */
 .card {
-  width: 100%; /* Ensure the card takes up 100% of the card container's width */
- height: 250px;
-  padding: 5px; /* Add padding inside the card */
-    box-sizing: border-box; /* Prevent padding from affecting the card's width */
-    display: flex;
+  width: 100%;  height: 250px;
+  padding: 5px;     box-sizing: border-box;     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensure card content is spaced nicely */
-    background-color: #f8f8f800; /* Card background */
-    border-radius: 8px; /* Rounded corners for the card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow for the card */
-}
+    justify-content: space-between;     background-color: #f8f8f800;     border-radius: 8px;     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
 
 .card-container {
-  display: inline-block; /* Ensures the card container adjusts based on the card's width */
-  width: 215px;
+  display: inline-block;   width: 215px;
   height: 210px;
-  padding: 1px; /* Padding for the card container */
-  box-sizing: border-box; /* Ensure padding doesn't add extra width */
-  background-color: #ffffff; /* Optional: Background for card container */
-}
+  padding: 1px;   box-sizing: border-box;   background-color: #ffffff; }
 
-/* Footer customization */
   
   .bttn {
     background-color: #0275d8; 
@@ -275,7 +221,6 @@ img.center {
     display: block;
     margin: 0 auto;
 }
-/* Make images smaller and consistent */
 
 
 
@@ -300,27 +245,17 @@ img.center {
     color: rgb(255, 255, 255);
 }
 
-/* Contenedor de las imágenes */
 .image-container {
   display: flex;
   margin:15px;
-  justify-content: center;  /* Centra las imágenes horizontalmente dentro del contenedor */
-  align-items: center;      /* Alinea las imágenes verticalmente */
-  gap: 10px; /* Espacio entre las imágenes */
-}
+  justify-content: center;    align-items: center;        gap: 10px; }
 
 
 .image-oferta {
   justify-content: center;
   
-  width: 1080px;  /* Ancho fijo para las imágenes */
-  height: auto;   /* Mantiene la proporción de las imágenes */
-  border-radius: 3px; /* Esquinas redondeadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
-  transition: transform 0.3s ease-in-out; /* Efecto suave al hacer hover */
-}
+  width: 1080px;    height: auto;     border-radius: 3px;   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   transition: transform 0.3s ease-in-out; }
 
-/* Estilo para las imágenes */
 .image {
   
   width: 530px;   
@@ -339,26 +274,17 @@ img.center {
 }
 
 .container-box{
-  display: flex;          /* Flexbox for layout */
-  justify-content: center;  /* Center horizontally */
-  align-items: flex-start;  /* Align to the start (top) vertically */
-  width: 100%;              /* Adjust width as needed */
-  
+  display: flex;            justify-content: center;    align-items: flex-start;    width: 100%;                
 }
 
-/* Search Box Styling */
 .container-search {
-  position: sticky;  /* Keeps the container in place while scrolling */
-  top: 90px;
-  left: 185px;       /* Distance from the left edge */
-  width: 300px;  
+  position: sticky;    top: 90px;
+  left: 185px;         width: 300px;  
   padding: 20px;
   background-color: white;
-  border: 2px solid #ccc;    /* Border for the button */
-  border-radius: 8px;
+  border: 2px solid #ccc;      border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;     /* Ensure it stays on top of other content */
-}
+  z-index: 1000;     }
 
 .search-box {
   width: 100%;
@@ -407,23 +333,19 @@ img.center {
 }
 
 
-/* Responsive design: Adjust grid columns on smaller screens */
 @media (max-width: 1200px) {
   .product-list {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
-  }
+    grid-template-columns: repeat(3, 1fr);   }
 }
 
 @media (max-width: 900px) {
   .product-list {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
-  }
+    grid-template-columns: repeat(2, 1fr);   }
 }
 
 @media (max-width: 600px) {
   .product-list {
-    grid-template-columns: 1fr; /* 1 column on very small screens */
-  }
+    grid-template-columns: 1fr;   }
 }
 
 
@@ -431,8 +353,7 @@ img.center {
 
 form.Cen {
   flex: 1;
-  max-width: 200px; /* Adjust form width */
-  display: flex;
+  max-width: 200px;   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -459,37 +380,20 @@ form.Cen {
 }
 
 #compra-form {
-  width: 40px;              /* Fixed width for the input */
-  height: 40px;             /* Fixed height to make the input a circle */
-  font-size: 1.5rem;          /* Font size to match the buttons */
-  text-align: right;       /* Center the number inside the input */
-  padding: 0;               /* Remove padding to keep the circle shape */
-  border: 2px solid #ccc;   /* Border for the input */
-  border-radius: 50%;       /* Circle shape for the input */
-  background-color: #f8f9fa; /* Light background for the input */
-}
-/* Optional: Align buttons and input */
+  width: 40px;                height: 40px;               font-size: 1.5rem;            text-align: right;         padding: 0;                 border: 2px solid #ccc;     border-radius: 50%;         background-color: #f8f9fa; }
 .quantity-selector {
   display: flex;
-  justify-content: center; /* Center buttons and input */
-  align-items: center;     /* Vertically center buttons and input */
-  gap: 10px;               /* Space between the buttons and the input */
-}
+  justify-content: center;   align-items: center;       gap: 10px;               }
 
 .quantity-selector input {
-  width: 80px;             /* Set a fixed width for the input (adjust as needed) */
-  text-align: center;      /* Center text inside the input */
-  font-size: 1.5rem;       /* Adjust the font size for the input */
-}
+  width: 80px;               text-align: center;        font-size: 1.5rem;       }
 
 
 #producto-index {
   flex: 1;
-  max-width: 1200px;  /* Adjust the card width */
-  margin-bottom: 20px;
+  max-width: 1200px;    margin-bottom: 20px;
 }
 
-/* Custom adjustments to the product info and button alignment */
 .product-info {
   padding: 20px;
   margin-left: 20px;
@@ -500,39 +404,17 @@ form.Cen {
 }
 
 .quantity-selector button {
-  width: 60px;              /* Fixed width for the input */
-  height: 60px;
-  font-size: 2rem;           /* Larger font size to make buttons bigger */
-  padding: 12px 20px;        /* Bigger padding for larger buttons */
-  border: 2px solid #ccc;    /* Border for the button */
-  border-radius: 50%;        /* Make the buttons circular */
-  background-color: #076bd6;    /* White background for the button */
-  cursor: pointer;           /* Pointer cursor on hover */
-  transition: all 0.3s ease;  /* Smooth transition for hover effects */
-  display: flex;              /* Flex for centering the content */
-  justify-content: center;    /* Center content horizontally */
-  align-items: center;        /* Center content vertically */
-}
+  width: 60px;                height: 60px;
+  font-size: 2rem;             padding: 12px 20px;          border: 2px solid #ccc;      border-radius: 50%;          background-color: #076bd6;      cursor: pointer;             transition: all 0.3s ease;    display: flex;                justify-content: center;      align-items: center;        }
 
-/* Hover effect for the buttons */
 .quantity-selector button:hover {
-  background-color: #0655aa; /* Light background on hover */
-  transform: scale(1.1);      /* Slightly enlarge on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
-}
-/* Add to cart button */
+  background-color: #0655aa;   transform: scale(1.1);        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
 #compra-button {
-  background: linear-gradient(45deg, #007bff, #00c6ff); /* Blue gradient */
-  color: white;
+  background: linear-gradient(45deg, #007bff, #00c6ff);   color: white;
   border: none;
-  border-radius: 50px; /* Rounded corners */
-  padding: 15px 30px; /* Larger padding for a more substantial button */
-  font-weight: 600;
-  text-transform: uppercase; /* Uppercase text */
-  cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  width: auto;
+  border-radius: 50px;   padding: 15px 30px;   font-weight: 600;
+  text-transform: uppercase;   cursor: pointer;
+  transition: all 0.3s ease;   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   width: auto;
   display: inline-block;
   width: 100%;
   padding: 14px;
@@ -540,20 +422,16 @@ form.Cen {
 }
 
 body, html {
-  overflow-x: hidden;   /* Prevent horizontal scroll */
-  overflow-y: auto;     /* Ensure vertical scroll only if needed */
-}
+  overflow-x: hidden;     overflow-y: auto;     }
 
 
 
 #compra-button:hover{
-  background: linear-gradient(45deg, #0056b3, #0099cc); /* Darker gradient on hover */
-  width: 100%;
+  background: linear-gradient(45deg, #0056b3, #0099cc);   width: 100%;
   padding: 14px;
   font-size: 1.2rem;
 }
 
-/* Price styling */
 #precio1 {
   font-size: 1.8rem;
   font-weight: bold;
@@ -562,93 +440,49 @@ body, html {
 
 .container-compra {
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: space-between;  /* Align items to the top */
-  gap: 20px;                /* Space between the card and the product info */
-  padding: 20px;
+  justify-content: center;   align-items: space-between;    gap: 20px;                  padding: 20px;
   width: 100%;
 }
 
 
 
 
-/* Card styling */
 .card-singular {
-  max-width: 500px;        /* Set max width for the card */
-  width: 100%;             /* Make it flexible */
-  border: 1px solid black;
+  max-width: 500px;          width: 100%;               border: 1px solid black;
   border-radius: 8px;
   position: relative;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); 
 
 
 }
 
-/* Image inside the card */
 .card-singular .card-body img {
  
-  border-top-left-radius: 8px;  /* Rounded top-left corners */
-  border-top-right-radius: 8px; /* Rounded top-right corners */
-}
+  border-top-left-radius: 8px;    border-top-right-radius: 8px; }
 
-/* Product info section */
 .product-info {
 
-  flex-direction: column;  /* Stack items vertically */
-  justify-content: center; /* Center content vertically */
-  align-items: center;     /* Center content horizontally */
-}
+  flex-direction: column;    justify-content: center;   align-items: center;     }
 
-/* Fancy container with dark lining */
 .cen-container {
-  display: flex;                 /* Use flexbox to center content */
-  justify-content: center;       /* Horizontally center content */
-  align-items: center;           /* Vertically center content */
-  height: 100px;                 /* Full viewport height for vertical centering */
-  padding: 20px;                 /* Padding inside the container */
-  background-color: #f8f9fa;     /* Light background color */
-  border: 1.5px solid #333;        /* Dark border for a stylish lining */
-  border-radius: 12px;           /* Rounded corners for smoothness */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
-}
+  display: flex;                   justify-content: center;         align-items: center;             height: 100px;                   padding: 20px;                   background-color: #f8f9fa;       border: 1.5px solid #333;          border-radius: 12px;             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); }
 
-/* Centered message styling */
 .cen-message {
-  text-align: center;            /* Center the text inside the h1 */
-  font-size: 2rem;               /* Larger font size for emphasis */
-  color: #2c3e50;                /* Dark text color for contrast */
-  font-weight: bold;             /* Make the text bold */
-  line-height: 1.5;              /* Space out the text a bit for readability */
-}
+  text-align: center;              font-size: 2rem;                 color: #2c3e50;                  font-weight: bold;               line-height: 1.5;              }
 .category-checkbox {
   cursor: pointer;
 }
 
-/* product list AND SEARCH---------------------------------------------------------------------*/ 
-
-/* Custom container for each product */
 .product-list-card-container {
   display: flex;
-  justify-content: center;  /* Center the card container */
-  margin-bottom: 5px; /* Add spacing between cards */
-  background-color: transparent;  /* Make the background fully transparent */
-  border: 2px solid #ccc;    /* Border for the button */
-  border-radius: 8px; /* Rounded corners for the card */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Keep shadow for depth */
-}
+  justify-content: center;    margin-bottom: 5px;   background-color: transparent;    border: 2px solid #ccc;      border-radius: 8px;   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
 
-/* Product card styling */
 .product-list-card {
-  background-color: transparent;  /* Make the card background fully transparent */
-  border-radius: 8px;
+  background-color: transparent;    border-radius: 8px;
   overflow: hidden;
-  width: 250px; /* Fixed width for the card */
-  margin: 10px;
-  position: relative; /* Make sure the card has a relative position */
-}
+  width: 250px;   margin: 10px;
+  position: relative; }
 
-/* Card image section */
 .product-list-card-img-actions {
   position: relative;
   width: 150px;
@@ -662,60 +496,34 @@ body, html {
   left: 0;
   width: 150px;
   height: 150px;
-  object-fit: cover; /* Ensure image covers the area */
-}
+  object-fit: cover; }
 
-/* Card body */
 .product-list-card-body {
   padding: 20px;
-  background-color: transparent;  /* Make the card body fully transparent */
-  position: relative;  /* Ensure the price is positioned inside this context */
-}
+  background-color: transparent;    position: relative;  }
 
-/* Title and Brand Name */
 .product-list-card-body h6 {
-  font-size: 16px; /* Slightly bigger font size for better readability */
-  color: #333;  /* Dark text for readability */
-  font-weight: 600; /* Semi-bold for emphasis */
-  margin-bottom: 15px; /* Adjusted margin for a tighter look */
-  line-height: 1.4; /* Adding line height to give the text a bit of breathing room */
-  text-align: left; /* Align text to the left for better structure */
-  letter-spacing: 0.5px; /* Slight letter-spacing for better visual appeal */
-  text-transform: capitalize; /* Capitalizing the first letter of each word for a polished look */
-  background-color: transparent; /* Ensure background is transparent */
-}
+  font-size: 16px;   color: #333;    font-weight: 600;   margin-bottom: 15px;   line-height: 1.4;   text-align: left;   letter-spacing: 0.5px;   text-transform: capitalize;   background-color: transparent; }
 
-/* Link styling */
 .product-list-card-body h6 a {
   text-decoration: none;
 }
 
 .product-list-card-body h6 a:hover {
-  text-decoration: solid; /* Underline on hover */
-}
+  text-decoration: solid; }
 
-/* Price styling */
 .product-list-card-price {
-  position: absolute; /* Position the price absolutely */
-  bottom:-6px; /* Position at the bottom of the card */
-  left: 0px;  /* Position at the left of the card */
-  font-size: 20px;
+  position: absolute;   bottom:-6px;   left: 0px;    font-size: 20px;
   font-weight: bold;
-  color: #28a745; /* Green color for the price */
-  background-color: transparent;  /* Transparent background */
-}
+  color: #28a745;   background-color: transparent;  }
 
-/* CARRITO-CARD ---------------------------------------------------------------*/
 
 .carrito-card {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   margin-bottom: 15px;
-  border: 2px solid #ccc;    /* Border for the button */
-  border-radius: 8px; /* Rounded corners for the card */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Keep shadow for depth */
-}
+  border: 2px solid #ccc;      border-radius: 8px;   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
 
 .carrito-card-body {
   display: flex;
@@ -724,7 +532,6 @@ body, html {
   font-size: 14px;
 }
 
-/* Product Image */
 .carrito-img {
   flex-shrink: 0;
   margin-right: 15px;
@@ -737,7 +544,6 @@ body, html {
   border-radius: 8px;
 }
 
-/* Product Info */
 .carrito-info {
   flex-grow: 1;
   margin-right: 15px;
@@ -767,7 +573,6 @@ body, html {
   margin: 0;
 }
 
-/* Quantity Controls */
 .carrito-controls {
   display: flex;
   align-items: center;
@@ -789,7 +594,6 @@ body, html {
   font-weight: bold;
 }
 
-/* Price */
 .carrito-price {
   font-size: 16px;
   font-weight: bold;
@@ -798,7 +602,6 @@ body, html {
   width: 90px;
 }
 
-/* Remove Button */
 .carrito-remove {
   text-align: center;
   cursor: pointer;
@@ -810,32 +613,24 @@ body, html {
   text-decoration: none;
 }
 
-/* Custom styles for Comprar button */
 .comprar-btn {
   padding: 12px 30px;
   font-size: 18px;
   border-radius: 25px;
-  background: linear-gradient(45deg, #007bff, #00c6ff); /* Blue gradient */
-  color: white;
+  background: linear-gradient(45deg, #007bff, #00c6ff);   color: white;
   font-weight: bold;
   border: none;
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
-  /* Add a box-shadow for a subtle lift effect */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .comprar-btn:hover {
-  background: linear-gradient(45deg, #0056b3, #0099cc); /* Darker gradient on hover */
-  transform: scale(1.05); /* Slight zoom effect on hover */
-}
+  background: linear-gradient(45deg, #0056b3, #0099cc);   transform: scale(1.05); }
 
 .comprar-btn:active {
-  background: linear-gradient(45deg, #004080, #006699); /* Even darker on click */
-  transform: scale(1); /* Reset zoom effect */
-}
+  background: linear-gradient(45deg, #004080, #006699);   transform: scale(1); }
 
-/* Add a wrapper container for the button and total price for better control */
 .comprar-container {
   display: flex;
   justify-content: space-between;
@@ -858,28 +653,21 @@ body, html {
 
 .empty-cart-container {
   text-transform: none;
-  background-color: #f8f9fa; /* Light background color */
-  padding: 30px;
+  background-color: #f8f9fa;   padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 200px; /* Ensure there's some height even if content is small */
-  border: 1px solid #ddd;
+  min-height: 200px;   border: 1px solid #ddd;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
-}
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
 
 .empty-cart-content {
   text-transform: none;
-  text-align: center; /* Center the text inside */
-  max-width: 600px; /* Limit width to avoid wide text */
-}
+  text-align: center;   max-width: 600px; }
 
 #purchase-message-container {
-  background-color: #e0f7fa; /* Light blue background */
-  padding: 30px;
-  display: none; /* Hidden initially */
-  text-align: center;
+  background-color: #e0f7fa;   padding: 30px;
+  display: none;   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -888,135 +676,72 @@ body, html {
   text-transform: none;
   font-size: 28px;
   font-weight: bold;
-  color: #28a745;              /* Green color for the "success" message */
-  margin-bottom: 15px;
+  color: #28a745;                margin-bottom: 15px;
 }
 
 .empty-cart-subtext {
   text-transform: none;
-  font-size: 1.2rem;           /* Smaller text size for the subtext */
-  color: #6c757d;              /* Grey color for the subtext */
-}
+  font-size: 1.2rem;             color: #6c757d;              }
 
 
 .empty-cart-icon {
-  width: 100px;  /* Size of the icon */
-  height: 80px;
-  margin-bottom: 15px;  /* Space between icon and text */
-}
+  width: 100px;    height: 80px;
+  margin-bottom: 15px;  }
 
-/* Custom styles for the "bought-cart" class */
 .bought-cart {
   text-transform: none;
-  display: flex;              /* Use flexbox to align content */
-  justify-content: center;    /* Center content horizontally */
-  align-items: center;        /* Center content vertically */
-  background-color: #f7f7f7;  /* Light background color (optional) */
-  border-radius: 10px;        /* Rounded corners for the card (optional) */
-  padding: 20px;              /* Padding around the content */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-}
+  display: flex;                justify-content: center;      align-items: center;          background-color: #f7f7f7;    border-radius: 10px;          padding: 20px;                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
 
-/* Styling for the content inside the card */
 .bought-cart-content {
-  text-align: center;         /* Center text horizontally */
-  padding: 10px;
+  text-align: center;           padding: 10px;
 }
 
-/* Styling for the main message */
 .bought-cart-message {
   text-transform: none;
-  font-size: 2.5rem;           /* Larger text size for the main message */
-  color: #28a745;              /* Green color for the "success" message */
-  margin-bottom: 15px;         /* Space below the message */
-  font-weight: bold;           /* Make the message bold */
-}
+  font-size: 2.5rem;             color: #28a745;                margin-bottom: 15px;           font-weight: bold;           }
 
-/* Styling for the subtext */
 .bought-cart-subtext {
-  font-size: 1.2rem;           /* Smaller text size for the subtext */
-  color: #6c757d;              /* Grey color for the subtext */
-  margin-top: 0;               /* Remove any default margin on top */
-}
+  font-size: 1.2rem;             color: #6c757d;                margin-top: 0;               }
 
-/* Custom styles for the "added-product" message */
 .added-product {
-  display: flex;              /* Use flexbox to align content */
-  justify-content: center;    /* Center content horizontally */
-  align-items: center;        /* Center content vertically */
-  height: 100vh;              /* Full viewport height */
-  background-color: #f7f7f7;  /* Light background color (optional) */
-  border-radius: 10px;        /* Rounded corners for the card (optional) */
-  padding: 20px;              /* Padding around the content */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-}
+  display: flex;                justify-content: center;      align-items: center;          height: 100vh;                background-color: #f7f7f7;    border-radius: 10px;          padding: 20px;                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
 
-/* Styling for the content inside the card */
 .added-product-content {
-  text-align: center;         /* Center text horizontally */
-  padding: 10px;
+  text-align: center;           padding: 10px;
 }
 
-/* Styling for the main message */
 .added-product-message {
-  font-size: 2rem;            /* Larger text size for the main message */
-  color: #28a745;             /* Green color for the "success" message */
-  margin-bottom: 15px;        /* Space below the message */
-  font-weight: bold;          /* Make the message bold */
-}
+  font-size: 2rem;              color: #28a745;               margin-bottom: 15px;          font-weight: bold;          }
 
 
-/* Custom styles for the "added-product" message */
 .added-product {
-  display: flex;              /* Use flexbox to align content */
-  justify-content: center;    /* Center content horizontally */
-  align-items: center;        /* Center content vertically */
-  height: 100vh;              /* Full viewport height */
-  background-color: #f7f7f7;  /* Light background color */
-  border-radius: 10px;        /* Rounded corners for the card */
-  padding: 20px;              /* Padding around the content */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
+  display: flex;                justify-content: center;      align-items: center;          height: 100vh;                background-color: #f7f7f7;    border-radius: 10px;          padding: 20px;                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
 
-/* Styling for the content inside the card */
 .added-product-content {
-  text-align: center;         /* Center text horizontally */
-  padding: 10px;
+  text-align: center;           padding: 10px;
 }
 
-/* Styling for the main message */
 .added-product-message {
-  font-size: 2rem;            /* Larger text size for the message */
-  color: #28a745;             /* Green color for the "success" message */
-  margin-bottom: 15px;        /* Space below the message */
-  font-weight: bold;          /* Make the message bold */
-}
+  font-size: 2rem;              color: #28a745;               margin-bottom: 15px;          font-weight: bold;          }
 
-/* Styling for the modal popup */
 .carrito-delete-popup {
   text-transform: none;
-  display: none; /* Hidden by default */
-  position: fixed;
+  display: none;   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  z-index: 1000; /* Ensure the modal is above everything else */
-}
+  background: rgba(0, 0, 0, 0.112);   z-index: 1000; }
 
-/* Overlay behind the popup */
 .popup-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 1; /* Overlay under the popup content */
-}
+  background: rgba(0, 0, 0, 0.112);
+  z-index: 1; }
 
-/* The content inside the popup */
 .popup-content {
   position: absolute;
   top: 50%;
@@ -1031,16 +756,12 @@ body, html {
   max-width: 100%;
 }
 
-/* Image styling for the product in the popup */
 .popup-product-img {
-  width: 200px; /* Adjusted smaller size */
-  height: auto;
+  width: 200px;   height: auto;
   margin-bottom: 15px;
   border-radius: 4px;
 }
 
-/* Styling for the buttons in the popup */
-/* General button styling */
 .popup-btn {
   text-transform: none;
   color: white;
@@ -1052,61 +773,34 @@ body, html {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .confirm-delete {
-  background: linear-gradient(45deg, #007bff, #00c6ff); /* Blue gradient */
-}
+  background: linear-gradient(45deg, #007bff, #00c6ff); }
 
-/* Hover effects for all buttons */
 .popup-btn:hover {
-  background: linear-gradient(45deg, #0056b3, #0099cc); /* Darker gradient on hover */
-  transform: scale(1.05); /* Slight zoom effect on hover */
-}
+  background: linear-gradient(45deg, #0056b3, #0099cc);   transform: scale(1.05); }
 
-/* Specific styles for the "Cancel" button */
 .carrito-delete-popup .cancel-delete {
-  background-color: #999; /* Gray color for the "No" button */
-}
+  background-color: #999; }
 
 .carrito-delete-popup .cancel-delete:hover {
-  background-color: #666; /* Darker gray on hover */
-}
+  background-color: #666; }
 
 .trash-icon {
-  width: 30px; /* Adjust size */
-  height: 20px;
+  width: 30px;   height: 20px;
 }
-/* Clase para ocultar el mensaje cuando no hay productos */
 .no-product {
-  display: none; /* Inicialmente oculto */
-  position: fixed; /* Asegura que el mensaje esté fijo en la pantalla */
-  top: -10;  /* Asegura que esté en la parte superior de la pantalla */
-  left: 50%; /* Centra el mensaje horizontalmente */
-  transform: translateX(-50%); /* Ajusta el contenedor para centrarlo perfectamente */
-  display: flex;
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  z-index: 9999; /* Asegura que esté por encima de otros elementos */
-}
+  display: none;   position: fixed;   top: -10;    left: 50%;   transform: translateX(-50%);   display: flex;
+  justify-content: center;   align-items: center;   z-index: 9999; }
 
-/* Contenido del mensaje de "Producto inexistente" */
 .no-product-content {
   text-align: center; 
   padding: 20px;
   background-color: #fff;
-  border: 2px solid #ccc;    /* Border for the button */
-  border-radius: 8px; /* Rounded corners for the card */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Keep shadow for depth */
-  max-width: 600px; /* Max ancho para el mensaje */
-  width: 90%; /* Asegura que no sea más ancho que el 90% de la pantalla */
-  z-index: 10000; /* Asegura que el mensaje está por encima del fondo */
-}
+  border: 2px solid #ccc;      border-radius: 8px;   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);   max-width: 600px;   width: 90%;   z-index: 10000; }
 
-/* Ícono del mensaje */
 .no-product-icon {
-  width: 150px; /* Ajusté el tamaño */
-  margin-bottom: 20px;
+  width: 150px;   margin-bottom: 20px;
 }
 
-/* Título del mensaje */
 .no-product-message {
   font-size: 36px;
   font-weight: bold;
@@ -1115,7 +809,6 @@ body, html {
   margin-bottom: 10px;
 }
 
-/* Subtexto del mensaje */
 .no-product-subtext {
   font-size: 18px;
   color: #6c757d;
@@ -1125,9 +818,7 @@ body, html {
 
 
 .custom-alert {
-  background-color: #f8d7da;  /* Soft red background */
-  color: #721c24;  /* Dark red text */
-  padding: 20px 30px;
+  background-color: #f8d7da;    color: #721c24;    padding: 20px 30px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 18px;
@@ -1139,7 +830,6 @@ body, html {
   animation: fadeIn 0.5s ease-out;
 }
 
-/* Animation for the alert to fade in */
 @keyframes fadeIn {
   0% {
       opacity: 0;
@@ -1152,74 +842,49 @@ body, html {
 }
 
 .custom-nav-img {
-  width: 40px;  /* Adjust the size of the image */
-  height: auto;  /* Maintain the aspect ratio */
-  display: block;
-  margin: 0 auto;  /* Center the image */
-  transition: transform 0.3s ease;  /* Add smooth transition for hover effect */
-}
+  width: 40px;    height: auto;    display: block;
+  margin: 0 auto;    transition: transform 0.3s ease;  }
 
 a.nav-link {
-  margin-top: 2px; /* Add space between the button and the cart icon */
-}
+  margin-top: 2px; }
 
 
 
-/* Hover effect on the cart icon */
 .custom-nav-img:hover {
   transform: scale(1.1);
 }
 
 
 .login-btn {
-  background: linear-gradient(45deg, #007bff, #00c6ff); /* Blue gradient */
-  color: white;
+  background: linear-gradient(45deg, #007bff, #00c6ff);   color: white;
   border: none;
-  border-radius: 50px; /* Rounded corners */
-  padding: 12px 25px; /* Larger padding for a more substantial button */
-  font-size: 14px;
+  border-radius: 50px;   padding: 12px 25px;   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase; /* Uppercase text */
-  cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  width: auto;
+  text-transform: uppercase;   cursor: pointer;
+  transition: all 0.3s ease;   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   width: auto;
   display: inline-block;
 }
 
 .login-btn:hover {
-  background: linear-gradient(45deg, #0056b3, #0099cc); /* Darker gradient on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-  transform: translateY(-4px); /* Slightly lift the button on hover */
-}
+  background: linear-gradient(45deg, #0056b3, #0099cc);   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);   transform: translateY(-4px); }
 
 .login-btn:active {
-  color: #00a6dd; /* Green on hover */
-  transform: translateY(2px); /* Push button down slightly when clicked */
-}
+  color: #00a6dd;   transform: translateY(2px); }
 
 .login-btn:focus {
-  outline: none; /* Remove the default focus outline */
-}
+  outline: none; }
 
- /* The Modal */
- .login-modal {
-  display: none; /* Hidden by default */
-  position: fixed;
+  .login-modal {
+  display: none;   position: fixed;
   z-index: 1000;
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
-  overflow: hidden;
+  align-items: center;   justify-content: center;   overflow: hidden;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-  padding-top: 120px;
-  animation: fadeIn 0.4s ease-in-out; /* Fade-in animation */
-}
+  background-color: rgba(0, 0, 0, 0.5);   padding-top: 120px;
+  animation: fadeIn 0.4s ease-in-out; }
 
-/* Fade-in animation */
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
@@ -1228,43 +893,31 @@ a.nav-link {
 #login-modal .login-modal-content {
   background-color: #fff;
   border-radius: 10px;
-  width: 400px; /* Adjust to desired modal width */
-  padding: 20px;
-  position: relative; /* Relative positioning to contain absolute elements */
-}
+  width: 400px;   padding: 20px;
+  position: relative; }
 
-/* Modal Content */
 .login-modal-content {
   background-color: #fff;
   margin: 0 auto;
   padding: 40px;
   border-radius: 10px;
-  width: 400px; /* Adjust to desired modal width */
-  padding: 20px;
+  width: 400px;   padding: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  animation: slideIn 0.5s ease-in-out; /* Slide-in effect */
-}
-/* Close button inside the modal */
+  animation: slideIn 0.5s ease-in-out; }
 #close-modal {
-  position: absolute; /* Position it absolutely inside the modal */
-  top: 10px; /* Adjust top distance */
-  right: 10px; /* Adjust right distance */
-  font-size: 24px;
+  position: absolute;   top: 10px;   right: 10px;   font-size: 24px;
   color: #333;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 #close-modal:hover {
-  color: rgb(0, 123, 255); /* Change color on hover */
-}
-/* Slide-in animation */
+  color: rgb(0, 123, 255); }
 @keyframes slideIn {
   0% { transform: translateY(-50px); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; }
 }
 
-/* Close Button */
 .login-close-btn {
   color: #aaa;
   font-size: 28px;
@@ -1280,7 +933,6 @@ a.nav-link {
   color: #000;
 }
 
-/* Heading */
 .login-heading {
   
   text-align: center;
@@ -1290,7 +942,6 @@ a.nav-link {
   font-weight: 600;
 }
 
-/* Form Inputs */
 .login-label {
   font-size: 14px;
   text-transform: none;
@@ -1317,7 +968,6 @@ a.nav-link {
   outline: none;
 }
 
-/* Password container for eye icon */
 .password-container {
   text-transform: none;
   position: relative;
@@ -1336,10 +986,8 @@ a.nav-link {
 }
 
 .toggle-password-icon:hover {
-  color: #00a6dd; /* Green on hover */
-}
+  color: #00a6dd; }
 
-/* Buttons */
 .login-submit-btn,
 .login-cancel-btn {
   width: 100%;
@@ -1352,48 +1000,31 @@ a.nav-link {
   transition: all 0.3s ease;
 }
 
-/* Submit Button */
 .login-submit-btn {
-  background: linear-gradient(45deg, #007bff, #00c6ff); /* Blue gradient */
-  color: white;
+  background: linear-gradient(45deg, #007bff, #00c6ff);   color: white;
   border: none;
-  border-radius: 50px; /* Rounded corners */
-  padding: 12px 25px; /* Padding to make the button bigger */
-  font-size: 14px;
+  border-radius: 50px;   padding: 12px 25px;   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase; /* Uppercase text */
-  cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
-  display: inline-block;
+  text-transform: uppercase;   cursor: pointer;
+  transition: all 0.3s ease;   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);   display: inline-block;
   color: white;
 }
 
 .login-submit-btn:hover {
-  background: linear-gradient(45deg, #0056b3, #0099cc); /* Darker gradient on hover */
-}
+  background: linear-gradient(45deg, #0056b3, #0099cc); }
 
-/* Cancel Button */
 .login-cancel-btn {
-  background-color: #f443367c; /* Red */
-  color: white;
+  background-color: #f443367c;   color: white;
   border: none;
-  border-radius: 50px; /* Rounded corners */
-  padding: 12px 25px; /* Padding to make the button bigger */
-  font-size: 14px;
+  border-radius: 50px;   padding: 12px 25px;   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase; /* Uppercase text */
-  cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
-  display: inline-block;
+  text-transform: uppercase;   cursor: pointer;
+  transition: all 0.3s ease;   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);   display: inline-block;
 }
 
 .login-cancel-btn:hover {
-  background-color: #300504; /* Darker red */
-}
+  background-color: #300504; }
 
-/* Button group container */
 .button-group {
   display: flex;
   justify-content: space-between;
@@ -1404,46 +1035,30 @@ a.nav-link {
   width: 48%;
 }
 
-/* Responsive design */
 @media (max-width: 600px) {
   .login-modal-content {
-    width: 90%; /* Modal takes 90% of the screen width on small devices */
-    padding: 20px;
+    width: 90%;     padding: 20px;
   }
 }
 
-/* Style the Buscar Button */
 #Order-button {
-  background: linear-gradient(45deg, #007bff, #00c6ff); /* Blue gradient */
-  color: white;
+  background: linear-gradient(45deg, #007bff, #00c6ff);   color: white;
   border: none;
-  border-radius: 50px; /* Rounded corners */
-  padding: 12px 25px; /* Padding to make the button bigger */
-  font-size: 14px;
+  border-radius: 50px;   padding: 12px 25px;   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase; /* Uppercase text */
-  cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
-  display: inline-block;
+  text-transform: uppercase;   cursor: pointer;
+  transition: all 0.3s ease;   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);   display: inline-block;
 }
 
 #Order-button:hover {
-  background: linear-gradient(45deg, #0056b3, #0099cc); /* Darker gradient on hover */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
-  transform: translateY(-4px); /* Slightly lift the button on hover */
-}
+  background: linear-gradient(45deg, #0056b3, #0099cc);   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);   transform: translateY(-4px); }
 
 #Order-button:active {
-  background: #2575fc; /* Solid blue when clicked */
-  transform: translateY(2px); /* Button presses down when clicked */
-}
+  background: #2575fc;   transform: translateY(2px); }
 
 #Order-button:focus {
-  outline: none; /* Remove the default focus outline */
-}
+  outline: none; }
 
-/* General Table Styles */
 .table {
   width: 100%;
   margin-top: 20px;
@@ -1471,7 +1086,6 @@ a.nav-link {
   cursor: pointer;
 }
 
-/* Pagination Styles */
 .pagination {
   display: flex;
   justify-content: center;
@@ -1498,13 +1112,11 @@ a.nav-link {
   color: white;
 }
 
-/* Active page styling */
 .pagination li.active a {
   background-color: #007bff;
   color: white;
 }
 
-/* Disabled page link styling */
 .pagination li.disabled a {
   color: #ccc;
   border: 1px solid #ccc;
@@ -1513,7 +1125,6 @@ a.nav-link {
 
 
 
-/* General styles for body and modal */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -1527,7 +1138,6 @@ body {
   background-color: #0056b3;
 }
 
-/* Styling for the greeting text */
 #greeting {
   display: none;
   font-size: 18px;
@@ -1536,15 +1146,12 @@ body {
   padding: 10px 20px;
   border-radius: 5px;
 
-  white-space: nowrap; /* Esto asegura que el texto esté en la misma línea */
+  white-space: nowrap; 
 
-  text-align: left; /* Alineación del texto a la izquierda */
-  cursor: default; /* Esto hace que el cursor no cambie al pasar el ratón */
+  text-align: left; 
+  cursor: default; /
 }
 
-
-
-/* Styling for the collapse section */
 #collapse {
   display: none;
   margin-top: 10px;
@@ -1552,28 +1159,21 @@ body {
 
 #logout-button {
   padding: 8px 15px;
-  background: linear-gradient(45deg, #007bff, #00c6ff); /* Blue gradient */
+  background: linear-gradient(45deg, #007bff, #00c6ff); 
   color: white;
   border: none;
-  border-radius: 50px; /* Rounded corners */
-  padding: 12px 25px; /* Padding to make the button bigger */
+  border-radius: 50px; 
+  padding: 12px 25px; 
   margin-top: -20px;
   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase; /* Uppercase text */
+  text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+  transition: all 0.3s ease; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
   display: inline-block;
 }
 
 #logout-button:hover {
-  background: linear-gradient(45deg, #0056b3, #0099cc); /* Darker gradient on hover */
+  background: linear-gradient(45deg, #0056b3, #0099cc); 
 }
-
-
-
-
-
-
-

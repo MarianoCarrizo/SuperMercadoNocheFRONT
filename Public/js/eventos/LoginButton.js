@@ -99,7 +99,7 @@ function updateUIAfterLogin() {
         
         loginButton.style.display = "none"; 
         greeting.style.display = "block"; 
-        greeting.innerHTML = `Hola ${clientName}`; 
+        greeting.innerHTML = `Hola ${clientName}!`; 
 
         collapse.style.display = "block"; 
     }

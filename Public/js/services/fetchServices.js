@@ -276,7 +276,7 @@ export const DeleteCarrito = (carritoId) => {
 
 
 export const getCarritoById = (carritoId, callback) => {
-    fetch(`${urlCarritos}?id=${carritoId}`, {
+    fetch(`${urlCarritos}?clientId=${carritoId}`, {
         method: 'GET'
     })
     .then((httpResponse)=>{
