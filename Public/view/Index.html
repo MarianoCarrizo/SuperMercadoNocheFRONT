@@ -59,24 +59,27 @@
 
 
 <div id="login-modal" class="login-modal">
-  <div class="login-modal-content">
-    <span class="login-close-btn" id="close-modal">&times;</span>
-    <h2 class="login-heading">Ingresar</h2>
-    <form id="login-form" class="login-form">
-      <label for="email" class="login-label">Email:</label>
-      <input type="email" id="email" class="login-input" placeholder="Email..." required><br><br>
-      
-      <label for="password" class="login-label">Contraseña:</label>
-      <div class="password-container">
-        <input type="password" id="password" class="login-input" placeholder="Contraseña..." required>
-        <span id="toggle-password" class="toggle-password-icon fas fa-eye"></span> 
-      </div>
-      <br><br>
-
-      <button type="submit" class="login-submit-btn">Ingresar</button>
-    </form>
-    <button class="login-cancel-btn" id="cancel-login">Cancelar</button>
-  </div>
+	<div class="login-modal-content">
+		<span class="login-close-btn" id="close-modal">&times;</span>
+		<h2 class="login-heading">Ingresar</h2>
+		<form id="login-form" class="login-form">
+		  <label for="email" class="login-label">Email:</label>
+		  <input type="email" id="email" class="login-input" placeholder="Email..." required><br><br>
+	
+		  <label for="password" class="login-label">Contraseña:</label>
+		  <div class="password-container">
+			<input type="password" id="password" class="login-input" placeholder="Contraseña..." required>
+			<span id="toggle-password" class="toggle-password-icon fas fa-eye"></span>
+		  </div>
+		  <br><br>
+	
+		  <!-- Contenedor para mensajes de error -->
+		  <div id="error-message" style="display: none; color: red; font-weight: bold; text-align: center; margin-bottom: 10px;"></div>
+	
+		  <button type="submit" class="login-submit-btn">Ingresar</button>
+		</form>
+		<button class="login-cancel-btn" id="cancel-login">Cancelar</button>
+	  </div>
 </div>
 
 

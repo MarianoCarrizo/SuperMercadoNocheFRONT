@@ -28,33 +28,35 @@ cancelButton.addEventListener("click", function() {
 });
 
 
-loginForm.addEventListener("submit", function(event) {
-    event.preventDefault(); 
-    
+loginForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
     const email = document.getElementById("email").value;
     const password = passwordInput.value;
+    const errorMessage = document.getElementById("error-message");
+
+    errorMessage.style.display = "none";
 
     if (email && password) {
-        
-        login(email, password, function(response) {
+        login(email, password, function (response) {
             if (response) {
-
-                localStorage.setItem("clientName", response.nombre); 
-                localStorage.setItem("UserId", response.clienteId); 
-
-               
-                modal.style.display = "none";
-
-                updateUIAfterLogin();
-
                 
+                localStorage.setItem("clientName", response.nombre);
+                localStorage.setItem("UserId", response.clienteId);
+
+                modal.style.display = "none";
+                updateUIAfterLogin();
                 window.location.reload();
             } else {
-                console.log("Invalid email or password. Please try again.");
+               
+                errorMessage.textContent = "Email o contraseña incorrectos.\nInténtalo de nuevo.";
+                errorMessage.style.display = "block";
             }
         });
     } else {
-        console.log("Please enter both email and password.");
+        
+        errorMessage.textContent = "Por favor, completa todos los campos.";
+        errorMessage.style.display = "block";
     }
 });
 
